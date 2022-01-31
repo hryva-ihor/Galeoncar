@@ -1,0 +1,104 @@
+.header {
+
+    &__body {
+        max-width: 1440px;
+        height: 150px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+    }
+
+    &__logo-svg {
+    }
+
+    &__nav {
+        max-width: 700px;
+        width: 100%;
+    }
+
+    &__menu {
+    }
+
+    &__menu-lists {
+        display: flex; 
+        flex-wrap: wrap; 
+        justify-content: space-between;
+        
+    }
+
+    &__menu-lists-item {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 140%;
+        letter-spacing: 0.05em;
+        color: #FFFFFF;
+        mix-blend-mode: normal;
+        opacity: 0.8;
+    }
+
+
+
+}
+.header{
+        display: flex;
+        flex-direction: column;
+        max-width: 950px;
+        width: 100%;
+}
+.header__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 75px;
+
+
+}
+.social {
+
+    &__icons {
+        display: flex;
+        gap: 10px;
+    }
+
+    &__icons-item {
+        width: 25px;
+        height: 25px;
+    }
+}
+.header__under {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 75px;
+}
+.phone-number {
+    span{
+        display: inline-block;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 120%;
+        letter-spacing: 0.05em;
+        color: #EDC5A2;
+        
+    }
+
+}
+.app-link {
+    display: flex;
+    gap: 20px;
+}
+.app-store {
+}
+.google-play {
+}
+
+.header__border{
+    border-top: 1px solid rgb(255, 255, 255,0.25);
+    width: 100%;
+}
