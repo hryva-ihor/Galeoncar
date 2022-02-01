@@ -1,6 +1,6 @@
-@import "nullstyle";
+@import "scss_parts/nullstyle.scss";
 
-@import "fonts";
+
 @mixin font($font_name, $file_name, $weight, $style) {
 	@font-face {
 		font-family: $font_name;
@@ -10,8 +10,8 @@
 		font-style: #{$style};
 	}
 }
-
-@import "icomoonstyle";
+@import "scss_parts/fonts";
+@import "scss_parts/icomoonstyle";
 
 $fz-1:18px;
 $fz-2:36px;
@@ -29,14 +29,14 @@ $color-3: #EDC5A2;
 
 #wrapper{
     background-color: $color-2;
-    height: 100vh;
+    
 	padding: 0 35px;
 }
 #conteiner{
     max-width: 1920px;
     margin: 0 auto;
 }
-@import "header";
-@import "section__rent-car";
+@import "scss_parts/header";
+@import "scss_parts/section__rent-car";
 
 

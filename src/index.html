@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Galeoncar</title>
 </head>
@@ -14,9 +16,13 @@
             <main>
                 <section class="rent-car__body">
                     <div class="rent-car__body-img">
-                        <div class="carousel">
-
-                        </div>
+                            <div class="rent-car__carousel">
+                                <div><img src="img/rent-car-slider/Frame2.png" alt="car"></div>
+                                <div><img src="img/rent-car-slider/Frame3.png" alt="car"></div>
+                                <div><img src="img/rent-car-slider/Frame4.png" alt="car"></div>
+                                <div><img src="img/rent-car-slider/Frame5.png" alt="car"></div>
+                                <div><img src="img/rent-car-slider/Frame6.png" alt="car"></div>
+                            </div>
                     </div>
                 </section>
 
@@ -27,6 +33,15 @@
             @@include('path_html/_footer.html')
         </div>
     </div>
+    <script src="js/jquerry.js"></script>
+    <script src="js/slick.js"></script>
     <script src="js/script.min.js"></script>
+    <script>
+        $(document).ready(function(){
+    $('.rent-car__carousel').slick({
+        
+        });
+    });
+    </script>
 </body>
 </html>

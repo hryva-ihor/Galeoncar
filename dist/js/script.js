@@ -1,4 +1,3 @@
-
 function testWebP(callback) {
 
     let webP = new Image();

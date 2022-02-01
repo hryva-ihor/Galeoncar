@@ -1,6 +1,5 @@
-
-@@include('webp_func.js')
-@@include('burger.js')
+@@include('js-parts/webp_func.js')
+@@include('js-parts/burger.js')
 
 
 
