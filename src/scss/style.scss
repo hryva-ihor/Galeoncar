@@ -1,6 +1,6 @@
 @import "nullstyle";
 
-
+@import "fonts";
 @mixin font($font_name, $file_name, $weight, $style) {
 	@font-face {
 		font-family: $font_name;
@@ -10,14 +10,25 @@
 		font-style: #{$style};
 	}
 }
-@import "fonts";
+
 @import "icomoonstyle";
+
+$fz-1:18px;
+$fz-2:36px;
+
+
+
+$color-1: #FFFFFF;
+$color-2: #15171e;
+$color-3: #EDC5A2;
+
+
 *{
 	font-family: "Gilroy";
 }
 
 #wrapper{
-    background-color: #15171e;
+    background-color: $color-2;
     height: 100vh;
 	padding: 0 35px;
 }
@@ -26,4 +37,6 @@
     margin: 0 auto;
 }
 @import "header";
+@import "section__rent-car";
+
 

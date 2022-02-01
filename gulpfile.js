@@ -53,7 +53,8 @@ let {src , dest} = require('gulp'),
 function browserSync(params){
     browsersync.init({
         server:{
-            baseDir: "./" + project_folder + "/"
+            baseDir: "./" + project_folder + "/",
+            index: "index.html"
         },
         port:3000,
         notify:false
@@ -174,6 +175,9 @@ function fontStyle(params) {
 		})
 	}
 	return src(path.src.html);
+}
+function cb() {
+    
 }
 
 
