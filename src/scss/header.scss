@@ -7,27 +7,38 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        gap: 20px;
+        // position: relative;
     }
 
-    &__logo {
-    }
+    // &__logo {
+    // }
 
-    &__logo-svg {
-    }
-
+    // &__logo-svg {
+    // }
+// !        NAVIGATION        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
     &__nav {
         max-width: 700px;
         width: 100%;
     }
-
-    &__menu {
+    @media screen and (max-width: 768px) {
+        &__nav {
+            display: none;
+        }
     }
+
+    // &__menu {
+    // }
 
     &__menu-lists {
         display: flex; 
         flex-wrap: wrap; 
         justify-content: space-between;
         
+        
+    }
+    &__menu.menu-open{
+        display: none;
     }
 
     &__menu-lists-item {
@@ -40,6 +51,10 @@
         mix-blend-mode: normal;
         opacity: 0.8;
     }
+    &__menu-lists-item :hover{
+        color: #EDC5A2;
+    }
+    
 
 
 
@@ -49,15 +64,27 @@
         flex-direction: column;
         max-width: 950px;
         width: 100%;
+        flex-wrap: wrap;
 }
+// !        LOGO        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+.header {
+
+    &__logo {
+        display: flex;
+        gap:10px;
+    }
+}
+
 .header__top {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 75px;
+    flex-wrap: wrap;
 
 
 }
+// !        social icons        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 .social {
 
     &__icons {
@@ -65,9 +92,8 @@
         gap: 10px;
     }
 
-    &__icons-item {
-        width: 25px;
-        height: 25px;
+    &__icons a:hover {
+        animation: 1200ms ease 0s normal none 1 running shake;
     }
 }
 .header__under {
@@ -76,6 +102,7 @@
     justify-content: space-between;
     height: 75px;
 }
+// !        phone number        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 .phone-number {
     span{
         display: inline-block;
@@ -87,18 +114,166 @@
         color: #EDC5A2;
         
     }
+    span:hover{
+        transform: scale(1.02);
+        transition: all 0.2s linear;
+    }
 
 }
+// !        app-link        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 .app-link {
     display: flex;
     gap: 20px;
 }
-.app-store {
+.app-store, .google-play {
+    border: 2px solid white;
+    border-radius: 6px;
 }
-.google-play {
+.app-store:hover, .google-play:hover{
+    box-shadow:0px -3px 20px 0px rgba(255, 255, 255, 0.8);
+    transition: all 0.2s linear;
+    transform: scale(1.02);
 }
+// .google-play {
+    
+// }
 
 .header__border{
     border-top: 1px solid rgb(255, 255, 255,0.25);
     width: 100%;
+}
+
+// !BURGER                  xxxxxxxxxxxxxxxxxxxxxxxxxx
+.burger-icon {
+	width: 48px;
+	height: 48px;
+	border: none;
+	background: none;
+	// position: absolute;
+    left: 0;
+	outline: none;
+	display: none;
+	cursor: pointer;
+    background-color: #F07566;
+    border-radius: 50px;
+    // z-index: 20;
+}
+@media screen and( max-width: 768px) {
+    .burger-icon{
+        display: block;
+    }
+}
+.burger-icon-item {
+	width: 22px;
+	height: 2px;
+	background: #fff;
+	position: relative;
+    margin-left: 14px;
+    border-radius: 2px;
+    
+
+}
+
+.burger-icon-item::before {
+	content: "";
+	display: block;
+	width: 22px;
+	height: 2px;
+	background: #fff;
+	position: absolute;
+	top: -10px;
+	left: 0;
+    border-radius: 2px;
+    transition: all 0.3s ease 0s;
+}
+
+.burger-icon-item::after {
+	content: "";
+	display: block;
+	width: 22px;
+	height: 2px;
+	background: #fff;
+	position: absolute;
+	bottom: -10px;
+	left: 0;
+    border-radius: 2px;
+    transition: all 0.3s ease 0s;
+}
+.burger-icon.menu-open .burger-icon-item::before,
+.burger-icon.menu-open .burger-icon-item::after{
+    transform: rotate(-45deg);
+    top: 0px;
+    transition: all 0.3s ease 0s;
+    visibility: visible;
+}
+.burger-icon.menu-open .burger-icon-item::after{
+    transform: rotate(45deg);
+}
+.burger-icon.menu-open .burger-icon-item{
+    visibility: hidden;
+}
+
+
+
+
+
+
+// ! animation for social icons            xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+@keyframes shake {
+    0% {
+        transform: rotateZ(
+    0deg
+    );
+    }
+    
+    10% {
+        transform: rotateZ(
+    -30deg
+    );
+    }
+    20% {
+        transform: rotateZ(
+    15deg
+    );
+    }
+    30% {
+        transform: rotateZ(
+    -10deg
+    );
+    }
+    40% {
+        transform: rotateZ(
+    7.5deg
+    );
+    }
+    50% {
+        transform: rotateZ(
+    -6deg
+    );
+    }
+    60% {
+        transform: rotateZ(
+    5deg
+    );
+    }
+    70% {
+        transform: rotateZ(
+    -4.28571deg
+    );
+    }
+    80% {
+        transform: rotateZ(
+    3.75deg
+    );
+    }
+    90% {
+        transform: rotateZ(
+    -3.33333deg
+    );
+    }
+    100% {
+        -webkit-transform: rotateZ(
+    0deg
+    );
+}
 }
