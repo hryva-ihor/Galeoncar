@@ -1,5 +1,5 @@
-@@include('js-parts/webp_func.js')
-@@include('js-parts/burger.js')
+@@include('js_parts/burger.js'),
+@@include('js_parts/slicksettings.js')
 
 
 

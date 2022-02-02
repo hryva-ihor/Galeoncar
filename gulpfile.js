@@ -40,9 +40,9 @@ let {src , dest} = require('gulp'),
     rename = require("gulp-rename"),
     uglify = require('gulp-uglify-es').default,
     imagemin = require('gulp-imagemin'),
-    webp = require('gulp-webp'),
-    webphtml = require('gulp-webp-html'),
-    webpcss = require("gulp-webpcss"),
+    // webp = require('gulp-webp'),
+    // webphtml = require('gulp-webp-html'),
+    // webpcss = require("gulp-webpcss"),
     ttf2woff = require("gulp-ttf2woff"),
     ttf2woff2 = require("gulp-ttf2woff2"),
     fonter = require("gulp-fonter"),
@@ -50,12 +50,12 @@ let {src , dest} = require('gulp'),
     sourcemaps = require("gulp-sourcemaps"),
     postcss = require('gulp-postcss');
 
-function browserSync(params){
+function browserSync(){
     browsersync.init({
         server:{
-            baseDir: "./" + project_folder + "/",
-            index: "index.html"
+            baseDir: "./" + project_folder + "/"
         },
+        index: `index.html`,
         port:3000,
         notify:false
     })
@@ -64,7 +64,7 @@ function browserSync(params){
 function html(){
     return src(path.src.html)
     .pipe(fileinclude())
-    .pipe(webphtml())
+    // .pipe(webphtml())
     .pipe(dest(path.build.html))
     .pipe(browsersync.stream());
 }
@@ -83,6 +83,7 @@ function css(){
         // ))
         .pipe(mode.development( sourcemaps.write() ) )
         .pipe(dest(path.build.css))
+        .pipe(browsersync.stream())
         .pipe(
             autoprefixer({
                 overrideBrowserslist: ['last 5 versions'],
@@ -120,11 +121,11 @@ function js(){
 
 function images(){
     return src(path.src.img)
-    .pipe(
-        webp({
-            quality: 70
-        })
-    )
+    // .pipe(
+    //     webp({
+    //         quality: 70
+    //     })
+    // )
     .pipe(dest(path.build.img))
     .pipe(src(path.src.img))
     .pipe(
@@ -147,7 +148,7 @@ gulp.task(`otf2ttf`, function(){
     .pipe(dest(source_folder + `/fonts/`));
 })
 
-function fonts(params){
+function fonts(){
     src(path.src.fonts)
         .pipe(ttf2woff())
         .pipe(dest(path.build.fonts))
@@ -156,7 +157,7 @@ function fonts(params){
         .pipe(dest(path.build.fonts))
 }
 
-function fontStyle(params) {
+function fontStyle() {
 	let file_content = fs.readFileSync(source_folder + '/scss/scss_parts/fonts.scss');
 	if (file_content == '') {
 		fs.writeFile(source_folder + '/scss/scss_parts/fonts.scss', '', cb);
@@ -181,7 +182,7 @@ function cb() {
 }
 
 
-function watchFiles(params){
+function watchFiles(){
     gulp.watch([path.watch.html], html)
     gulp.watch([path.watch.css], css)
     gulp.watch([path.watch.js], js)
@@ -189,18 +190,18 @@ function watchFiles(params){
 
 }
 
-function clean(params){
+function clean(){
     return del(path.clean);
 }
 
 let build = gulp.series(clean, gulp.parallel(js,css, html, images, fonts),fontStyle);
 
-let watch = gulp.parallel(build, watchFiles);
+let watch  = gulp.parallel(build, watchFiles, browserSync);
 
 if(process.env.NODE_ENV === 'production') {
-    exports.default = gulp.parallel(build, watchFiles);
+    exports.default  = gulp.parallel(build, watchFiles);
 } else {
-    exports.default = gulp.parallel(build, watchFiles, browserSync);
+    exports.default  = gulp.parallel(build, watchFiles, browserSync);
 }
 
 
@@ -213,7 +214,8 @@ exports.css = css;
 exports.html = html;
 exports.build = build;
 exports.watch = watch;
-// exports.default = watch; 
+// exports.default = watch;
+
 
 
 
