@@ -16,7 +16,7 @@
 $fz-1:18px;
 $fz-2:36px;
 
-
+$ff: "Gilroy";
 
 $color-1: #FFFFFF;
 $color-2: #15171e;
@@ -38,6 +38,7 @@ $color-3: #EDC5A2;
 }
 @import "scss_parts/header";
 @import "scss_parts/section__rent-car";
+@import "scss_parts/section_rent-tipe";
 
 
 

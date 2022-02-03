@@ -47,9 +47,9 @@ let {src , dest} = require('gulp'),
     ttf2woff2 = require("gulp-ttf2woff2"),
     fonter = require("gulp-fonter"),
     mode = require("gulp-mode")(),
-    sourcemaps = require("gulp-sourcemaps"),
+    sourcemaps = require("gulp-sourcemaps");
     // postcss = require('gulp-postcss')
-    ;
+
 
 function browserSync(){
     browsersync.init({

@@ -59,6 +59,9 @@ $(document).ready(function(){
         $('.rent-car__carousel').slick(`setPosition`);
     });
 
+        // transition: all 0.5s linear 0.5s;
+    // transition-delay: 0.5s;
+
 
 
 
