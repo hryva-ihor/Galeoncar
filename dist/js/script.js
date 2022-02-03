@@ -43,8 +43,9 @@ $(document).ready(function(){
         centerMode: true,
         infinite:true,
         centerPadding: `0px`,
-        
-        // initialSlide: 4,
+        // speed: 500,
+        useTransform: true,
+        cssEase: 'linear',
         // responsive:[
         //     {
         //         breakpoint: 1000,
@@ -54,9 +55,6 @@ $(document).ready(function(){
         //     }
         // ],
         appendArrows: $(`.arrows_block`)
-
-
-
         });
         $('.rent-car__carousel').slick(`setPosition`);
     });
