@@ -1,0 +1,124 @@
+// !    slider for section__rent-car.scss                              
+/* Слайдер */
+
+.rent-car__carousel {
+    max-width: 1440px;
+    min-width: 0;
+    position: relative;
+    padding: 0 150px;
+    // cursor: pointer;
+}
+/* Слайдер запущен */
+.rent-car__carousel.slick-initialized{}
+/* Слайдер с точками */
+.rent-car__carousel.slick-dotted{}
+/* Ограничивающая оболочка */
+.rent-car__carousel .slick-list {
+    
+    
+}
+/* Лента слайдов */
+.rent-car__carousel .slick-track{
+    display: flex;
+
+}
+/* Слайд */
+.rent-car__carousel .slick-slide{
+    transition: none;
+    // z-index: 25;
+    // transition-delay: 0.5s;
+}
+// центрирование слайдеров при центрмод
+.rent-car__carousel-item.slick-slide{
+    text-align: center;
+    
+    
+}
+.rent-car__carousel-item.slick-center{
+    
+}
+
+
+/* Слайд активный (показывается) */
+.rent-car__carousel .slick-slide.slick-active{
+    transform: scale(1.15); 
+    z-index: 50;   
+    transition: transform 0.5s linear 0.5s;
+    // transition-delay: 0.5s;
+}
+/* Слайд основной */
+.rent-car__carousel .slick-slide.slick-current{
+    // opacity: 1;
+    transform: scale(1.35);
+    z-index: 100;
+    transition: transform 0.5s linear 0.5s;
+    // transition-delay: 0.5s;
+    
+    
+}
+/* Слайд по центру */
+.rent-car__carousel .slick-slide.slick-center{
+}
+/* Клонированный слайд */
+.rent-car__carousel .slick-slide.slick-cloned{
+    // transition: transform 0.5s linear 0.5s;
+        // transition: all 0.5s linear;
+    transition-delay: 0.5s;
+}
+// блок со стрелками
+.arrows_block{
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
+/* Стрелка */
+.arrows_block .slick-arrow{
+    // position: absolute;
+    // top: 50%;
+    z-index: 10;
+    width: 30px;
+    height: 10px;
+    font-size: 0;
+}
+/* Стрелка влево */
+.arrows_block .slick-arrow.slick-prev{
+    // left: 0;
+    background: url(../img/arrows/BUTTONS/CombinedShape.svg)0 0/ 100% no-repeat;
+    transform: rotateY(180deg);
+    margin-right: 20px;
+}
+/* Стрелка вправо */
+.arrows_block .slick-arrow.slick-next{
+    // right: 0;
+    background: url(../img/arrows/BUTTONS/CombinedShape.svg) 0 0/ 100% no-repeat;
+    
+}
+/* Стрелка не активная */
+.rent-car__carousel .slick-arrow.slick-disabled{}
+/* Точки (булиты) */
+.rent-car__carousel .slick-dots{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rent-car__carousel .slick-dots li{
+    list-style: none;
+}
+/* Активная точка */
+.rent-car__carousel .slick-dots li.slick-active{
+
+}
+.rent-car__carousel .slick-dots li.slick-active button{
+    background-color: transparent;
+    border: 1px solid wheat;
+}
+/* Элемент точки */
+.rent-car__carousel .slick-dots li button{
+    font-size: 0;
+    width: 10px;
+    height: 10px;
+    background-color: wheat;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
