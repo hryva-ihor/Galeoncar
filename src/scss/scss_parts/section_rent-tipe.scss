@@ -8,7 +8,7 @@
     &__item-above {
         font-style: normal;
         font-weight: normal;
-        font-size: 24px;
+        font-size: $fz-1-2;
         line-height: 120%;
         /* identical to box height, or 29px */
 
@@ -23,7 +23,7 @@
     &__item-beyond {
         font-style: normal;
         font-weight: 900;
-        font-size: 48px;
+        font-size: $fz-3;
         line-height: 61px;
         letter-spacing: 0.1em;
 
@@ -32,38 +32,66 @@
         color: $color-3
     }
 }
+
+
+
 .rent-type {
     
-    &__aboute {
-        background-color: $color-2;
-        display: flex;
-        flex-wrap: wrap;
-    }
+
 
     &__aboute-item {
-        width: 33.33%;
-        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex: 0 1 33.33%;
+        // position: relative;
         img{
             width: 100%;
             height: 100%;
             object-fit: cover;
-            min-width: 190px;
+            // min-width: 190px;
         }
         a{
             color: $color-1;
-            position: absolute;
+            // position: absolute;
             z-index: 10;
             display: inline-block;
             width: 222px;
             height: 48px;
             border: 1px solid $color-1;
             border-radius: 6px;
-            bottom: 40px;
-            left: 50%;
-            transform: translate(-50%,-50%);
+            // bottom: 40px;
+            // left: 50%;
+            // transform: translate(-50%,-50%);
             text-align: center;
             text-transform: uppercase;
         }
+    }
+}
+
+
+.rent-type {
+
+    &__block {
+    }
+
+    &__aboute {
+        background-color: $color-2;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    }
+
+    &__aboute-item {
+
+    }
+
+    &__aboute-item-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__aboute-item-btn {
+
     }
 }
 

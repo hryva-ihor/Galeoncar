@@ -9,7 +9,9 @@
     // cursor: pointer;
 }
 /* Слайдер запущен */
-.rent-car__carousel.slick-initialized{}
+.rent-car__carousel.slick-initialized{
+    margin: 45px 0;
+}
 /* Слайдер с точками */
 .rent-car__carousel.slick-dotted{}
 /* Ограничивающая оболочка */
@@ -69,9 +71,22 @@
 .arrows_block{
     position: absolute;
     right: 10px;
-    top: 0;
+    top: -8px;
 }
 /* Стрелка */
+.arrows_block::before{
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: $color-3;
+    left: 52px;
+    top: 3px;
+    pointer-events:none;
+    position: relative;
+    
+}
 .arrows_block .slick-arrow{
     // position: absolute;
     // top: 50%;
@@ -79,19 +94,30 @@
     width: 30px;
     height: 10px;
     font-size: 0;
+
 }
 /* Стрелка влево */
 .arrows_block .slick-arrow.slick-prev{
     // left: 0;
     background: url(../img/arrows/BUTTONS/CombinedShape.svg)0 0/ 100% no-repeat;
     transform: rotateY(180deg);
-    margin-right: 20px;
+    margin-right: 40px;
+    position: relative;
+    &:hover{
+        background: url(../img/arrows/slider_arrow-orange.svg) 0 0/ 100% no-repeat;
+        transform: rotateY(0);
+    }
+
+
 }
 /* Стрелка вправо */
 .arrows_block .slick-arrow.slick-next{
     // right: 0;
     background: url(../img/arrows/BUTTONS/CombinedShape.svg) 0 0/ 100% no-repeat;
-    
+    &:hover{
+        background: url(../img/arrows/slider_arrow-orange.svg) 0 0/ 100% no-repeat;
+        transform: rotateY(180deg);
+    }
 }
 /* Стрелка не активная */
 .rent-car__carousel .slick-arrow.slick-disabled{}

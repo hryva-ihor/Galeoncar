@@ -1,6 +1,8 @@
 @import "scss_parts/nullstyle.scss";
 
-
+html{
+	font-size: 10px;
+}
 @mixin font($font_name, $file_name, $weight, $style) {
 	@font-face {
 		font-family: $font_name;
@@ -13,8 +15,19 @@
 @import "scss_parts/fonts";
 @import "scss_parts/icomoonstyle";
 
-$fz-1:18px;
-$fz-2:36px;
+$fz-1:1.8rem;
+$fz-1-2: 2.4rem;
+$fz-2:3.6rem;
+$fz-3:4.2rem;
+$fz-4:7.2rem;
+$fz-5:9.2rem;
+
+// @media screen and (max-width: 1500px) {
+// 	html{
+// 		font-size: 30px;
+// 	}
+// }
+
 
 $ff: "Gilroy";
 
