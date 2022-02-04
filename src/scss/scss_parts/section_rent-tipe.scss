@@ -1,72 +1,8 @@
 .rent-type__block{
-    padding: 140px 0;
-}
-.title {
-    text-transform: uppercase;
-    text-align: center;
-    padding: 0 0  80px 0;
-    &__item-above {
-        font-style: normal;
-        font-weight: normal;
-        font-size: $fz-1-2;
-        line-height: 120%;
-        /* identical to box height, or 29px */
-
-        letter-spacing: 0.05em;
-
-        /* white */
-
-        color: $color-1;
-        margin-bottom: 8px;
-    }
-
-    &__item-beyond {
-        font-style: normal;
-        font-weight: 900;
-        font-size: $fz-3;
-        line-height: 61px;
-        letter-spacing: 0.1em;
-
-        /* pr4 */
-
-        color: $color-3
-    }
+    padding: $block-padding-top-bottom 0;
+    background-color: $color-4;
 }
 
-
-
-.rent-type {
-    
-
-
-    &__aboute-item {
-        display: flex;
-        flex-direction: column;
-        flex: 0 1 33.33%;
-        // position: relative;
-        img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            // min-width: 190px;
-        }
-        a{
-            color: $color-1;
-            // position: absolute;
-            z-index: 10;
-            display: inline-block;
-            width: 222px;
-            height: 48px;
-            border: 1px solid $color-1;
-            border-radius: 6px;
-            // bottom: 40px;
-            // left: 50%;
-            // transform: translate(-50%,-50%);
-            text-align: center;
-            text-transform: uppercase;
-        }
-    }
-}
 
 
 .rent-type {
@@ -75,23 +11,64 @@
     }
 
     &__aboute {
-        background-color: $color-2;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        background-color: $color-4;
+        display: flex;
+
+        // display: grid;
+        // grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        row-gap: 24px;
+        flex-wrap: wrap;
     }
 
     &__aboute-item {
-
+        position: relative;
+        flex: 1 0  333px;
     }
 
     &__aboute-item-img {
-        width: 100%;
         height: 100%;
-        object-fit: cover;
+        
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            
+        }
+
     }
 
     &__aboute-item-btn {
+        display: flex;
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translate(-50%,-50%);
 
+        &:hover{
+            
+            
+        }
+        span{
+            width: 222px;
+            height: 48px;
+            display: inline;
+            color: $color-1;
+            z-index: 10;
+            vertical-align: middle;
+            text-align: center;
+            text-transform: uppercase;
+            font-style: normal;
+            font-weight: 600;
+            font-size: $fz-1;
+            border: 1px solid $color-1;
+            border-radius: 6px;
+            line-height: 48px;
+            &:hover{
+                background-color: $color-1;
+                color: $color-4;
+            }
+            
+        }
     }
 }
 

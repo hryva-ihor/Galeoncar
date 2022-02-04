@@ -1,0 +1,71 @@
+.accordion-rent__body{
+    position: relative;
+    padding:  $block-padding-top-bottom 0;
+    .body-img, .body-shadow {
+        width: 100%;
+		height: 100%;
+		object-fit: cover;
+		position: absolute;
+		left: 0;
+		top: 0;
+    }
+    .title{
+        position: relative;
+        z-index: 10;
+    }
+
+}
+
+.accordeon__body{
+    position: relative;
+    display: flex;
+    z-index: 100000;
+    flex-wrap: wrap;
+    > div{
+        flex: 0 1 870px;
+    }
+}
+
+
+
+.accordion {
+    background-color: #CFD8DC;
+    color: #fff;
+    cursor: pointer;
+    padding: 16px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    transition: 0.5s;
+}
+
+.active, .accordion:hover {
+    background-color: #607D8B;
+}
+
+.accordion:after {
+    content: '\002B';
+    color: #fff;
+  font-size: 18px;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.panel {
+    padding: 0 18px;
+    color: #212121;
+    background-color: #fff;
+    max-height: 0;
+    // overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    div{
+        overflow: hidden;
+    }
+}

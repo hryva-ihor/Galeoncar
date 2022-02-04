@@ -1,8 +1,13 @@
+// ! null style         
 @import "scss_parts/nullstyle.scss";
 
+
+//! HTML font size for rem 
 html{
 	font-size: 10px;
 }
+
+//! constructor for font-face
 @mixin font($font_name, $file_name, $weight, $style) {
 	@font-face {
 		font-family: $font_name;
@@ -15,6 +20,9 @@ html{
 @import "scss_parts/fonts";
 @import "scss_parts/icomoonstyle";
 
+$block-padding-top-bottom: 140px;
+
+// ! fons size variables
 $fz-1:1.8rem;
 $fz-1-2: 2.4rem;
 $fz-2:3.6rem;
@@ -31,9 +39,12 @@ $fz-5:9.2rem;
 
 $ff: "Gilroy";
 
+
+// ! color size variables
 $color-1: #FFFFFF;
 $color-2: #15171e;
 $color-3: #EDC5A2;
+$color-4: black;
 
 
 *{
@@ -49,14 +60,55 @@ $color-3: #EDC5A2;
     max-width: 1920px;
     margin: 0 auto;
 }
+.border-gradient{
+	background: linear-gradient(black,hsla(0, 0%, 100%, 0.15),black);;
+	height: 2px
+}
+
+.title {
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0 0  80px 0;
+    &__item-above {
+        font-style: normal;
+        font-weight: normal;
+        font-size: $fz-1-2;
+        line-height: 120%;
+        /* identical to box height, or 29px */
+
+        letter-spacing: 0.05em;
+
+        /* white */
+
+        color: $color-1;
+        margin-bottom: 8px;
+    }
+
+    &__item-beyond {
+        font-style: normal;
+        font-weight: 900;
+        font-size: $fz-3;
+        line-height: 61px;
+        letter-spacing: 0.1em;
+
+        /* pr4 */
+
+        color: $color-3
+    }
+}
+
+
+
+
+
+
 @import "scss_parts/header";
 @import "scss_parts/section__rent-car";
 @import "scss_parts/section_rent-tipe";
+@import "scss_parts/section_autopark__body";
+@import "scss_parts/section_accordion-rent__body";
 
-
-
-
-
+//! style for slider
 @import "scss_parts/slider";
 
 
