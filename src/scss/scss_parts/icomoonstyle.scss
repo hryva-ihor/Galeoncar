@@ -9,6 +9,17 @@
   font-style: normal;
   font-display: block;
 }
+// @font-face {
+//   font-family: 'icomoon2';
+//   src:  url('../fonts/icomoon2.eot');
+//   src:  url('../fonts/icomoon2.eot') format('embedded-opentype'),
+//     url('../fonts/icomoon2.ttf') format('truetype'),
+//     url('../fonts/icomoon2.woff') format('woff'),
+//     url('../fonts/icomoon2.svg') format('svg');
+//   font-weight: normal;
+//   font-style: normal;
+//   font-display: block;
+// }
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
@@ -24,14 +35,29 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+// [class^="icon-"], [class*=" icon-"] {
+//   /* use !important to prevent issues with browser extensions that change fonts */
+//   font-family: 'icomoon2' !important;
+//   // speak: never;
+//   font-style: normal;
+//   font-weight: normal;
+//   font-variant: normal;
+//   text-transform: none;
+//   line-height: 1;
+
+//   /* Better Font Rendering =========== */
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+// }
 
 
 .icon-calendar:before {
   content: "\e901";
   color: #fff;
 }
-.icon-Card1:before {
+.icon-card:before {
   content: "\e902";
+  color: #fff;
 }
 .icon-Clock:before {
   content: "\e903";
@@ -63,8 +89,9 @@
   color: #fff;
 }
 //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-.icon-Handshake:before {
+.icon-handshake:before {
   content: "\e906";
+  color: #fff;
 }
 .icon-pin_adress:before {
   content: "\e908";
@@ -98,8 +125,20 @@
   content: "\e90c";
   color: #fff;
 }
-.icon-Vector:before {
+.icon-vector:before {
   content: "\e90d";
   color: #fff;
 }
 
+.icon-credit-card:before {
+  content: "\e93f";
+  color: #fff;
+}
+.icon-clock:before {
+  content: "\e94e";
+  color: #fff;
+}
+.icon-user-tie:before {
+  content: "\e976";
+  color: #fff;
+}
