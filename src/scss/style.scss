@@ -17,8 +17,7 @@ html{
 		font-style: #{$style};
 	}
 }
-@import "scss_parts/fonts";
-@import "scss_parts/icomoonstyle";
+
 
 $block-padding-top-bottom: 140px;
 
@@ -48,7 +47,8 @@ $color-3: #EDC5A2;
 $color-4: black;
 $color-5: #232731;
 
-
+@import "scss_parts/fonts";
+@import "scss_parts/icomoonstyle";
 
 *{
 	font-family: "Gilroy";
@@ -110,6 +110,7 @@ $color-5: #232731;
 @import "scss_parts/section_rent-tipe";
 @import "scss_parts/section_autopark__body";
 @import "scss_parts/section_accordion-rent__body";
+@import "scss_parts/section__reviews";
 
 //! style for slider
 @import "scss_parts/slider";

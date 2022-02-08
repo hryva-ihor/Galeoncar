@@ -1,6 +1,7 @@
 .accordion-rent__body{
     position: relative;
     padding:  $block-padding-top-bottom 0;
+    overflow: hidden;
     .body-img, .body-shadow {
         width: 100%;
 		height: 100%;
@@ -28,11 +29,24 @@
 }
 @media screen and (max-width: 1000px){
     .accordeon-content{
-        flex-wrap: wrap;
+        flex-direction: column-reverse;
     }
     .accordion-rent__aboute{
-        flex: 1 1 390px;
+        flex: 0 1 1000px;
         margin: 0 10px;
+        flex-direction: row;
+        column-gap: 70px;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-height: 300px;
+        // align-items: center;
+        div{
+
+            flex: 0 1 390px;
+            div:last-child{
+                margin-bottom: 0;
+            }
+        }
     }
 }
 
@@ -44,8 +58,6 @@
     row-gap: 40px;
 }
 .accordion-rent__aboute{
-    flex: 0 1 390px;
-    min-width: 330px;
     background-color: $color-5;
     z-index: 10;
 }
@@ -145,8 +157,28 @@
 
     &__aboute {
         padding: 43px 100px 43px 87px;
+        display: flex;
+        flex-wrap: wrap;
+        max-height: 600px;
+        // flex-direction: column;
+        flex: 0 1 390px;
+        position: relative;
+        // z-index: 10;
         div{
-            margin: 40px 0;
+            flex: 0 1 230px;
+            margin-bottom: 40px;
+            position: relative;
+
+        }
+        &:after{
+            content:"";
+            border: 1px solid $color-3;;
+            position:absolute;
+            left:25px;
+            top:-25px;
+            width:97%;
+            height:110%;
+            z-index:-10;
         }
     }
 
@@ -158,6 +190,7 @@
         font-size: $fz-1;
         text-transform: uppercase;
         color: $color-1;
+
     }
 
     &__aboute-text{
@@ -166,5 +199,28 @@
         font-size: $fs-01;
         letter-spacing: 0.05em;
         color: $color-1;
+    }
+}
+@media screen and (max-width: 1000px){
+    .accordion-rent__aboute{
+        flex: 0 1 1000px;
+        margin: 0 10px;
+        flex-direction: row;
+        column-gap: 70px;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 20px 20px 20px 50px;
+
+        div{
+            flex: 0 1 160px;
+            div:last-child{
+                margin-bottom: 0;
+            }
+        }
+        &:after{
+            left:20px;
+            height:105%;
+            // z-index:-10;
+        }
     }
 }
