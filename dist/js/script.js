@@ -44,6 +44,7 @@ $(document).ready(function(){
         centerMode: true,
         infinite:true,
         centerPadding: `0px`,
+        focusOnSelect: true,
         // speed: 500,
         useTransform: true,
         cssEase: 'linear',
@@ -59,73 +60,61 @@ $(document).ready(function(){
         });
 
 // !    slider for section_autopark__body.scss                              
-        $('.autopark__carousel').slick({
-            dots: true,
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            infinite:false,
-            centerPadding: `0px`,
-            // speed: 500,
-            
-            useTransform: true,
-            cssEase: 'linear',
-            responsive:[
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 2,
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 1,
-                    }
+    $('.autopark__carousel').slick({
+        dots: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite:false,
+        centerPadding: `0px`,
+        // speed: 500,
+        focusOnSelect: true,
+        useTransform: true,
+        cssEase: 'linear',
+        responsive:[
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
                 }
-            ],
-            appendArrows: $(`.autopark__carousel__arrows_block`),
-            appendDots: $(`.autopark__carousel__dots_block`)
-            });
-            var dots = $('.autopark__carousel li');
-            //вешаем обработчик на наши точки
-            dots.click(function(){
-                var $this = $(this);
-                dots.removeClass('before after');
-                //отображаем 2 предыдущие точки
-                $this
-                    .prev().addClass('before')
-                    .prev().addClass('before');
-                //отображаем 2 следующие точки
-                $this
-                    .next().addClass('after')
-                    .next().addClass('after');
-        
-            
-                //если мы в самом начале - добавляем пару последующих точек
-                if(!$this.prev().length) {
-                    $this.next().next().next()
-                        .addClass('after').next()
-                        .addClass('after');
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
                 }
-                //на 2й позиции - добавляем одну точку
-                if(!$this.prev().prev().length) {
-                    $this.next().next().next()
-                    .addClass('after');
-                }
-                //в самом конце - добавляем пару доп. предыдущих точек
-                if(!$this.next().length) {
-                    $this.prev().prev().prev()
-                        .addClass('before').prev()
-                        .addClass('before');
-                }
-                //предпоследний элемента - добавляем одну пред. точку
-                if(!$this.next().next().length) {
-                    $this.prev().prev().prev()
-                        .addClass('before');
-                }	
-            });
-            dots.eq(0).click();//кликаем на первую точку
-            $('.autopark__carousel , .rent-car__carousel').slick(`setPosition`);
+            }
+        ],
+        appendArrows: $(`.autopark__carousel__arrows_block`),
+        appendDots: $(`.autopark__carousel__dots_block`)
+        });
+
+
+// ! slider for sections reviews                          
+        $('.carousel-reviews').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.carousel-username'
+        });
+        $('.carousel-username').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        asNavFor: '.carousel-reviews',
+        dots: true,
+        // arrows: true,
+        // centerMode: true,
+        focusOnSelect: true,
+        centerPadding: `0px`,
+        infinite: true,
+        appendArrows: $(`.carousel-username__arrows`),
+        appendDots: $(`.carousel-username__dots`)
+        });
+
+
+
+
+            $('.carousel-reviews  .carousel-username  .autopark__carousel  .rent-car__carousel').slick(`setPosition`);
     });
 
 
@@ -150,4 +139,25 @@ accordion.forEach((item) => {
 
 
 
+
+function initMap() {
+    let myLatLng = {lat: 50.44900762437147, lng: 30.46055098217495};
+    let imgIcon = `img/pin_map.png`;
+    // let markerPosition = 50.45001800056024, 30.458515103173678
+    let stylesMap = [{"elementType":"geometry","stylers":[{"color":"#212121"}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"elementType":"labels.text.fill","stylers":[{"color":"#757575"}]},{"elementType":"labels.text.stroke","stylers":[{"color":"#212121"}]},{"featureType":"administrative","elementType":"geometry","stylers":[{"color":"#757575"}]},{"featureType":"administrative.country","elementType":"labels.text.fill","stylers":[{"color":"#9e9e9e"}]},{"featureType":"administrative.land_parcel","stylers":[{"visibility":"off"}]},{"featureType":"administrative.locality","elementType":"labels.text.fill","stylers":[{"color":"#bdbdbd"}]},{"featureType":"poi","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels.text.fill","stylers":[{"color":"#757575"}]},{"featureType":"poi.business","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#181818"}]},{"featureType":"poi.park","elementType":"labels.text.fill","stylers":[{"color":"#616161"}]},{"featureType":"poi.park","elementType":"labels.text.stroke","stylers":[{"color":"#1b1b1b"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"color":"#2c2c2c"}]},{"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#8a8a8a"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#373737"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"color":"#3c3c3c"}]},{"featureType":"road.highway.controlled_access","elementType":"geometry","stylers":[{"color":"#4e4e4e"}]},{"featureType":"road.local","elementType":"labels.text.fill","stylers":[{"color":"#616161"}]},{"featureType":"transit","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"labels.text.fill","stylers":[{"color":"#757575"}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"}]},{"featureType":"water","elementType":"labels.text.fill","stylers":[{"color":"#3d3d3d"}]}]
+    
+    let map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 17,  // определяет масштаб карты, ее "зум"
+        center: myLatLng,       // map coordinate
+        styles: stylesMap        // map styles
+    });
+        marker = new google.maps.Marker({
+            position: {lat: 50.45001800056024, lng: 30.458515103173678},     // centre cursor
+            map: map,
+            
+            animation: google.maps.Animation.BOUNCE,   // jump cursor
+            icon: imgIcon
+
+        });
+}
 

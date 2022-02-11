@@ -48,6 +48,10 @@
 .icon-email:before {
   content: "\e904";
   color: #edc5a2;
+  position: absolute;
+  top: 5px;
+  left: -50px;
+  font-size: $fs-2-1;
 }
 .icon-facebook:before {
   content: "\e905";
@@ -64,6 +68,10 @@
 .icon-pin_adress:before {
   content: "\e908";
   color: #edc5a2;
+  position: absolute;
+  top: 5px;
+  left: -50px;
+  font-size: $fs-2-1;
 }
 .icon-plus:before {
   content: "\e909";
