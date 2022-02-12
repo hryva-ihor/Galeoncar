@@ -1,9 +1,25 @@
 const burger = document.querySelector(`#burger-icon`);
 burger.addEventListener("click", () => {
-    let burgers = document.querySelectorAll('.header__menu, .burger-icon');
+    let burgers = document.querySelectorAll('.header__menu, .burger-icon, .app-link');
     // document.querySelector(`body`).classList.toggle(`lock`);
     burgers.forEach(item => item.classList.toggle('menu-open'));
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -12,14 +12,14 @@ $(document).ready(function(){
         // speed: 500,
         useTransform: true,
         cssEase: 'linear',
-        // responsive:[
-        //     {
-        //         breakpoint: 1000,
-        //         settings: {
-        //             slidesToShow: 3,
-        //         }
-        //     }
-        // ],
+        responsive:[
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ],
         appendArrows: $(`.rent-car__carousel__arrows_block`)
         });
 

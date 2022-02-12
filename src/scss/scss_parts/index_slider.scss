@@ -58,6 +58,31 @@
     
     
 }
+@media screen and (max-width: 768px) {
+    .rent-car__carousel .slick-slide.slick-active{
+        transform: scale(1.0); 
+    }
+    /* Слайд основной */
+    .rent-car__carousel .slick-slide.slick-current{
+
+        transform: scale(1.15);
+    }
+    .rent-car__carousel {
+        padding: 0 130px;
+    }
+}
+@media screen and (max-width: 560px) {
+    .rent-car__carousel {
+        padding: 0 90px;
+    }
+}
+@media screen and (max-width: 410px) {
+    .rent-car__carousel {
+        padding: 0 50px;
+    }
+}
+
+
 /* Слайд по центру */
 .rent-car__carousel .slick-slide.slick-center{
 }
@@ -357,9 +382,13 @@
     cursor: pointer;
 }
 /* Слайд активный (показывается) */
-.carousel-username.slick-slide.slick-active{}
+.carousel-username .slick-slide.slick-active{
+    opacity: 0.5;
+}
 /* Слайд основной */
-.carousel-username.slick-slide.slick-current{}
+.carousel-username .slick-slide.slick-current{
+    opacity: 1;
+}
 /* Слайд по центру */
 .carousel-username.slick-slide.slick-center{}
 /* Клонированный слайд */

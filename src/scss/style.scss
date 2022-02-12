@@ -3,9 +3,37 @@
 
 
 //! HTML font size for rem 
-html{
-	font-size: 10px;
+@media screen and( min-width: 1280px) {
+    html{
+        font-size: 10px;
+    }
 }
+
+@media screen and( max-width: 1280px) {
+    html{
+        font-size: 9px;
+    }
+}
+@media screen and( max-width: 1000px) {
+    html{
+        font-size: 8px;
+    }
+}
+@media screen and( max-width: 768px) {
+    html{
+        font-size: 7px;
+    }
+}
+// @media screen and( max-width: 470px) {
+//     html{
+//         font-size: 6px;
+//     }
+// }
+// @media screen and( max-width: 430px) {
+//     html{
+//         font-size: 5px;
+//     }
+// }
 
 //! constructor for font-face
 @mixin font($font_name, $file_name, $weight, $style) {
@@ -18,7 +46,7 @@ html{
 	}
 }
 
-
+//! padding section
 $block-padding-top-bottom: 140px;
 
 // ! fons size variables
@@ -30,12 +58,6 @@ $fz-2:3.6rem;
 $fz-3:4.2rem;
 $fz-4:7.2rem;
 $fz-5:9.2rem;
-
-// @media screen and (max-width: 1500px) {
-// 	html{
-// 		font-size: 30px;
-// 	}
-// }
 
 
 $ff: "Gilroy";
@@ -138,6 +160,7 @@ $color-5: #232731;
 @import "scss_parts/section_accordion-rent__body";
 @import "scss_parts/section__reviews";
 @import "scss_parts/section_contact_body";
+@import "scss_parts/footer";
 
 //! style for slider
 @import "scss_parts/index_slider";

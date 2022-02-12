@@ -1,9 +1,25 @@
 const burger = document.querySelector(`#burger-icon`);
 burger.addEventListener("click", () => {
-    let burgers = document.querySelectorAll('.header__menu, .burger-icon');
+    let burgers = document.querySelectorAll('.header__menu, .burger-icon, .app-link');
     // document.querySelector(`body`).classList.toggle(`lock`);
     burgers.forEach(item => item.classList.toggle('menu-open'));
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -48,14 +64,14 @@ $(document).ready(function(){
         // speed: 500,
         useTransform: true,
         cssEase: 'linear',
-        // responsive:[
-        //     {
-        //         breakpoint: 1000,
-        //         settings: {
-        //             slidesToShow: 3,
-        //         }
-        //     }
-        // ],
+        responsive:[
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ],
         appendArrows: $(`.rent-car__carousel__arrows_block`)
         });
 
@@ -152,7 +168,7 @@ function initMap() {
         styles: stylesMap        // map styles
     });
         marker = new google.maps.Marker({
-            position: {lat: 50.45001800056024, lng: 30.458515103173678},     // centre cursor
+            position: {lat: 50.45001800056024, lng: 30.458515103173678}, 
             map: map,
             
             animation: google.maps.Animation.BOUNCE,   // jump cursor

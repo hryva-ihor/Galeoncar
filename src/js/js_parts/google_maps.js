@@ -10,7 +10,7 @@ function initMap() {
         styles: stylesMap        // map styles
     });
         marker = new google.maps.Marker({
-            position: {lat: 50.45001800056024, lng: 30.458515103173678},     // centre cursor
+            position: {lat: 50.45001800056024, lng: 30.458515103173678}, 
             map: map,
             
             animation: google.maps.Animation.BOUNCE,   // jump cursor
