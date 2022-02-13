@@ -127,7 +127,7 @@
     }
 
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 410px) {
     .header {
     
         &__logo-lion {
@@ -182,6 +182,26 @@
     }
 
 }
+@media screen and (max-width: 460px) {
+    .phone-number {
+        span{
+            font-weight: bold;
+            font-size:$fz-1;
+        }
+    
+    }
+    .header__under {
+        height: 30px;
+    }
+    .header__top {
+        height: 30px;
+        justify-content: flex-end;
+    }
+    .header__logo {
+    margin-right: 5px;
+    gap: 0px;
+    }
+}
 // !        app-link        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 .app-link {
     display: flex;
@@ -222,11 +242,12 @@
     .burger-icon{
         display: block;
     }
+
     .header__menu.menu-open{
         display: block;
         position: absolute;
         left: 0;
-        top: 90px;
+        top: 80px;
         z-index: 1000;
         & .header__menu-lists{
             flex-direction: column;
@@ -245,6 +266,7 @@
         z-index: 1000;
         left: 30px;
         top: 360px;
+        z-index: 10000;
     }
 }
 
@@ -282,7 +304,7 @@
 	height: 2px;
 	background: #fff;
 	position: absolute;
-	top: -10px;
+	top: -8px;
 	left: 0;
     border-radius: 2px;
     transition: all 0.3s ease 0s;
@@ -295,7 +317,7 @@
 	height: 2px;
 	background: #fff;
 	position: absolute;
-	bottom: -10px;
+	bottom: -8px;
 	left: 0;
     border-radius: 2px;
     transition: all 0.3s ease 0s;

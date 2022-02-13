@@ -190,6 +190,18 @@
     // margin: 45px 0;
     overflow: hidden;
 }
+@media screen and (max-width: 768px) {
+    .autopark__carousel.slick-initialized{
+        // margin: 45px 0;
+        padding-right: 40px;
+    }
+}
+@media screen and (max-width: 380px) {
+    .autopark__carousel.slick-initialized{
+        // margin: 45px 0;
+        padding-right: 0px;
+    }
+}
 /* Слайдер с точками */
 .autopark__carousel.slick-dotted{}
 /* Ограничивающая оболочка */
@@ -378,7 +390,6 @@
 }
 /* Слайд */
 .carousel-username .slick-slide{
-
     cursor: pointer;
 }
 /* Слайд активный (показывается) */

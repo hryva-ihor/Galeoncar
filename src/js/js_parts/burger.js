@@ -1,8 +1,10 @@
 const burger = document.querySelector(`#burger-icon`);
 burger.addEventListener("click", () => {
     let burgers = document.querySelectorAll('.header__menu, .burger-icon, .app-link');
+    let body = document.querySelector(`body`)
     // document.querySelector(`body`).classList.toggle(`lock`);
     burgers.forEach(item => item.classList.toggle('menu-open'));
+    body.classList.toggle(`block-scroll`)
 });
 
 

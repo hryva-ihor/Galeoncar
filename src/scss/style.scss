@@ -24,11 +24,11 @@
         font-size: 7px;
     }
 }
-// @media screen and( max-width: 470px) {
-//     html{
-//         font-size: 6px;
-//     }
-// }
+@media screen and( max-width: 470px) {
+    #wrapper{
+        padding: 0 10px;
+    }
+}
 // @media screen and( max-width: 430px) {
 //     html{
 //         font-size: 5px;
@@ -47,7 +47,7 @@
 }
 
 //! padding section
-$block-padding-top-bottom: 140px;
+$block-padding-top-bottom: 14rem;
 
 // ! fons size variables
 $fs-01: 1.6rem;
@@ -150,6 +150,11 @@ $color-5: #232731;
         color: $color-2;
         background-color: $color-1;
     }
+}
+
+// block scroll class
+.block-scroll{
+    overflow: hidden;
 }
 
 

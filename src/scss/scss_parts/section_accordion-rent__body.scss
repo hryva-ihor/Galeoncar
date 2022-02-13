@@ -209,23 +209,40 @@
 @media screen and (max-width: 1000px){
     .accordion-rent__aboute{
         flex: 0 1 1000px;
-        margin: 0 10px;
-        flex-direction: row;
+        margin: 0 5px;
+        // flex-direction: row;
         column-gap: 70px;
-        justify-content: center;
-        flex-wrap: wrap;
-        padding: 20px 20px 20px 50px;
+        // justify-content: center;
+        padding: 20px 20px 20px 30px;
 
         div{
-            flex: 0 1 160px;
-            div:last-child{
-                margin-bottom: 0;
-            }
+            flex: 0 1 140px;
+            margin-bottom: 0;
+
         }
         &:after{
             left:20px;
             height:105%;
             // z-index:-10;
         }
+    }
+}
+@media screen and (max-width: 700px){
+    .accordion-rent__aboute{
+        column-gap: 20px;
+        &:after{
+            left:0px;
+            height:105%;
+            // z-index:-10;
+        }
+        div{
+            flex: 0 1 100px;
+        }
+    }
+}
+@media screen and (max-width: 500px){
+    .accordion-rent__aboute{
+        padding: 20px 0px 20px 20px;
+
     }
 }

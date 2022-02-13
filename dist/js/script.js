@@ -1,8 +1,10 @@
 const burger = document.querySelector(`#burger-icon`);
 burger.addEventListener("click", () => {
     let burgers = document.querySelectorAll('.header__menu, .burger-icon, .app-link');
+    let body = document.querySelector(`body`)
     // document.querySelector(`body`).classList.toggle(`lock`);
     burgers.forEach(item => item.classList.toggle('menu-open'));
+    body.classList.toggle(`block-scroll`)
 });
 
 
@@ -91,12 +93,16 @@ $(document).ready(function(){
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 2,
+                    dots: false,
+                    arrows: false,
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
                     slidesToShow: 1,
+                    dots: false,
+                    arrows: false,
                 }
             }
         ],
@@ -120,6 +126,26 @@ $(document).ready(function(){
         dots: true,
         // arrows: true,
         // centerMode: true,
+        responsive:[
+            {
+                breakpoint: 1000,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 410,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ],
         focusOnSelect: true,
         centerPadding: `0px`,
         infinite: true,
@@ -168,7 +194,7 @@ function initMap() {
         styles: stylesMap        // map styles
     });
         marker = new google.maps.Marker({
-            position: {lat: 50.45001800056024, lng: 30.458515103173678}, 
+            position: {lat: 50.45001800056024, lng: 30.46055098217495}, 
             map: map,
             
             animation: google.maps.Animation.BOUNCE,   // jump cursor

@@ -39,12 +39,16 @@ $(document).ready(function(){
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 2,
+                    dots: false,
+                    arrows: false,
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
                     slidesToShow: 1,
+                    dots: false,
+                    arrows: false,
                 }
             }
         ],
@@ -68,6 +72,26 @@ $(document).ready(function(){
         dots: true,
         // arrows: true,
         // centerMode: true,
+        responsive:[
+            {
+                breakpoint: 1000,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 410,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ],
         focusOnSelect: true,
         centerPadding: `0px`,
         infinite: true,
