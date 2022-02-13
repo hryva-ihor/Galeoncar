@@ -429,6 +429,11 @@
 
 
 }
+@media screen and (max-width: 410px ) {
+    .carousel-username__arrows .slick-arrow.slick-prev{
+        margin-right: 60px;
+    }
+}
 /* Стрелка вправо */
 .carousel-username__arrows .slick-arrow.slick-next{
 

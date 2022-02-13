@@ -189,17 +189,10 @@
                 right: 0px;
             }
             &__dots-arrows {
-                position: absolute;
-                right: 55%;
-                top: 0px;
-                z-index: 10000;
+                right: 0;
             }
     
             &__dots {
-                position: absolute;
-                left: 50%;
-                transform: translate(-50%, 50%);
-                top: -50%;
             }
         }
         .carousel-reviews__item  {
