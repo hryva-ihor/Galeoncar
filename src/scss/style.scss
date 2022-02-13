@@ -1,7 +1,9 @@
 // ! null style         
 @import "scss_parts/nullstyle.scss";
 
-
+// html{
+//     scroll-behavior: smooth;
+// }
 //! HTML font size for rem 
 @media screen and( min-width: 1280px) {
     html{
@@ -155,6 +157,9 @@ $color-5: #232731;
 // block scroll class
 .block-scroll{
     overflow: hidden;
+}
+.displayNone{
+    display: none
 }
 
 

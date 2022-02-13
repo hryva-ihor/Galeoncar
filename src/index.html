@@ -9,7 +9,7 @@
 </head>
 <body>
     <div id="wrapper">
-        <div id="conteiner">
+        <div id="conteiner main">
             @@include('path_html/_header.html')
             <div class="border-gradient"></div>
             <main>
@@ -42,7 +42,7 @@
                 <!-- !  border-gradient                -->
                 <div class="border-gradient"></div>
                 <!-- !       tipe of rent block         -->
-                <section class="rent-type__block">
+                <section id="rent" class="rent-type__block">
                     <div class="title">
                         <h3 class="title__item-above">виды</h3>
                         <h2 class="title__item-beyond">аренды</h2>
@@ -72,7 +72,7 @@
                 <!-- !  border-gradient                -->
                 <div class="border-gradient"></div>
                 <!-- !       autopark__block         -->
-                <section class="autopark__body">
+                <section id="autopark" class="autopark__body">
                     <div class="title">
                         <h3 class="title__item-beyond">автопарк</h3>
                         <div>
@@ -111,7 +111,7 @@
                 <!-- !  border-gradient                -->
                 <div class="border-gradient"></div>
                 <!-- !       accordion-rent__body         -->
-                <section class="accordion-rent__body">
+                <section id="rentconditions" class="accordion-rent__body">
                     <div class="conteiner">
                         <div class="title">
                             <h3 class="title__item-above">условия</h3>
@@ -308,7 +308,7 @@
                                             Tony has more than 10 years of experience, building and implementing startups. Tom has his master’s degree in Analytics, and a bachelor’s degree in Psychology from University of London. As CTO of Flexo, Tony projects the vision of the company by directing its strategic technology investments. Before Flexo, Tony was Senior Director of Research and Modeling at CDA Insurance, where he managed a team of developers. 
                                         </p>
                                         <div class="carousel-reviews__item-rate">
-                                            <img class="carousel-reviews__item-star" src="img/_Group_.png" alt="rate-star"><span class="carousel-reviews__item-aboute"><a href="#">Подробнее...</a></span>
+                                            <img class="carousel-reviews__item-star" src="img/rate-star.png" alt="rate-star"><span class="carousel-reviews__item-aboute"><a href="#">Подробнее...</a></span>
                                         </div>
                                     </div>
                                     <div class="carousel-reviews__item">
@@ -317,7 +317,7 @@
                                             As CTO of Flexo, Tony projects the vision of the company by directing its strategic technology investments. Before Flexo, Tony was Senior Director of Research and Modeling at CDA Insurance, where he managed a team of developers. Tom has his master’s degree in Analytics, and a bachelor’s degree in Psychology from University of London.Tony has more than 10 years of experience, building and implementing startups. 
                                         </p>
                                         <div class="carousel-reviews__item-rate">
-                                            <img class="carousel-reviews__item-star" src="img/_Group_.png" alt="rate-star"><span class="carousel-reviews__item-aboute"><a href="#">Подробнее...</a></span>
+                                            <img class="carousel-reviews__item-star" src="img/rate-star.png" alt="rate-star"><span class="carousel-reviews__item-aboute"><a href="#">Подробнее...</a></span>
                                         </div>
                                     </div>
                                     <div class="carousel-reviews__item">
@@ -326,7 +326,7 @@
                                             Tony has more than 10 years of experience, building and implementing startups. As CTO of Flexo, , Tony was Senior Director of Research and Modeling at CDA Insurance, where he managed a team of developers. Tom has his master’s degree in Analytics, and a bachelor’s degree in Psychology from University of London Tony projects the vision of the company by directing its strategic technology investments. Before Flexo.
                                         </p>
                                         <div class="carousel-reviews__item-rate">
-                                            <img class="carousel-reviews__item-star" src="img/_Group_.png" alt="rate-star"><span class="carousel-reviews__item-aboute"><a href="#">Подробнее...</a></span>
+                                            <img class="carousel-reviews__item-star" src="img/rate-star.png" alt="rate-star"><span class="carousel-reviews__item-aboute"><a href="#">Подробнее...</a></span>
                                         </div>
                                     </div>
                                     <div class="carousel-reviews__item">
@@ -335,7 +335,7 @@
                                             Director of Research and Modeling at CDA Insurance, where he managed a team of developers. Tom has his master’s degree in Analytics Tony has more than 10 years of experience, building and implementing startups. As CTO of Flexo, Tony projects the vision of the company by directing its strategic technology investments. Before Flexo, Tony was Senior , and a bachelor’s degree in Psychology from University of London.
                                         </p>
                                         <div class="carousel-reviews__item-rate">
-                                            <img class="carousel-reviews__item-star" src="img/_Group_.png" alt="rate-star"><span class="carousel-reviews__item-aboute"><a href="#">Подробнее...</a></span>
+                                            <img class="carousel-reviews__item-star" src="img/rate-star.png" alt="rate-star"><span class="carousel-reviews__item-aboute"><a href="#">Подробнее...</a></span>
                                         </div>
                                     </div>
                                     <div class="carousel-reviews__item">
@@ -344,7 +344,7 @@
                                             Tom has his master’s degree in Analytics, and a bachelor’s degree in Psychology from University of London. Tony has more than 10 years of experience, building and implementing startups. As CTO of Flexo, Tony projects the vision of the company by directing its strategic technology investments. Before Flexo, Tony was Senior Director of Research and Modeling at CDA Insurance, where he managed a team of developers. 
                                         </p>
                                         <div class="carousel-reviews__item-rate">
-                                            <img class="carousel-reviews__item-star" src="img/_Group_.png" alt="rate-star"><span class="carousel-reviews__item-aboute"><a href="#">Подробнее...</a></span>
+                                            <img class="carousel-reviews__item-star" src="img/rate-star.png" alt="rate-star"><span class="carousel-reviews__item-aboute"><a href="#">Подробнее...</a></span>
                                         </div>
                                     </div>
                                     
@@ -365,10 +365,10 @@
                 <!-- !       contakt__body        -->
                 <section class="contact-body">
                     <div id="map"></div>
-                    <div class="contact-block">
+                    <div id="contactBlock" class="contact-block">
                         <div>
                             <div class="contact-block__title">
-                                <h3>КОНТАКТЫ</h3>
+                                <h3 >КОНТАКТЫ <span id="contactBlockCloseBtn" class="icon-plus"></span></h3>
                                 <p>Поможем подобрать наилучший вариант</p>
                             </div>
                             <div class="border-gradient border-gradient__contact"></div>

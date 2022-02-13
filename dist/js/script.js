@@ -1,14 +1,60 @@
 const burger = document.querySelector(`#burger-icon`);
+let burgers = document.querySelectorAll('.header__menu, .burger-icon, .app-link');
+let body = document.querySelector(`body`)
 burger.addEventListener("click", () => {
-    let burgers = document.querySelectorAll('.header__menu, .burger-icon, .app-link');
-    let body = document.querySelector(`body`)
-    // document.querySelector(`body`).classList.toggle(`lock`);
     burgers.forEach(item => item.classList.toggle('menu-open'));
-    body.classList.toggle(`block-scroll`)
+    // body.classList.toggle(`block-scroll`)
+});
+
+const contactBlockCloseBtn = document.querySelector('#contactBlockCloseBtn');
+const contactBlock = document.querySelector('#contactBlock');
+contactBlockCloseBtn.addEventListener("click", () => {
+    contactBlock.classList.add("displayNone");
 });
 
 
 
+
+
+// $(document).click( function(e){
+//     if ( $(e.target).closest('.header__menu-lists').length ) {
+//         // клик внутри элемента 
+//         return;
+//     }
+//     // клик снаружи элемента 
+//             burger.classList.remove("menu-open");
+//             body.classList.remove(`block-scroll`);
+//             burgers.forEach(item => item.classList.remove('menu-open'));
+// });
+// $(document).mouseup(function (e) {
+//     var container = $(".header__menu-lists");
+//     if (container.has(e.target).length === 0){
+//             burger.classList.remove("menu-open");
+//             body.classList.remove(`block-scroll`);
+//             burgers.forEach(item => item.classList.remove('menu-open'));
+//     }
+// });
+
+// document.addEventListener("click", menu);
+
+// function menu(event) {
+// //   if (event.target.closest(".menu__button")) {
+// //     menuBody.classList.toggle("_active");
+// //   }
+//     for(var i=0; i<event.target.children.length; i++){
+//         event.preventDefault()
+//         console.log(event.target.children[i].classList.value );
+//         console.log(typeof(event.target.children[i].classList.value.length)  );
+//         // event.target.children[i].classList.value == `app-link` ? console.log(`yes`): ``;
+//         // event.target.children[i] ==
+//         if (event.target.children[i].classList.value != `header__menu-lists-item` || event.target.children[i].classList.value.length != 0 || event.target.children[i].classList.value != `header__menu-lists`) {
+//             burger.classList.remove("menu-open");
+//             body.classList.remove(`block-scroll`);
+//             burgers.forEach(item => item.classList.remove('menu-open'));
+//         }
+//     }
+
+// }
 
 
 
@@ -203,3 +249,14 @@ function initMap() {
         });
 }
 
+
+
+
+// slow csroll ankor link
+var $page = $('html, body');
+$('a[href*="#"]').click(function() {
+    $page.animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 400);
+    return false;
+});

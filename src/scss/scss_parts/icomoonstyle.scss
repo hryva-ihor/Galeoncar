@@ -76,6 +76,10 @@
 .icon-plus:before {
   content: "\e909";
   color: $color-1;
+  position: absolute;
+  font-size: 36px;
+  right: 0;
+  cursor: pointer;
 }
 .icon-rate__star:before {
   content: "\e90a";
