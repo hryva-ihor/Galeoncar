@@ -1,9 +1,6 @@
 // ! null style         
 @import "scss_parts/nullstyle.scss";
 
-// html{
-//     scroll-behavior: smooth;
-// }
 //! HTML font size for rem 
 @media screen and( min-width: 1280px) {
     html{
@@ -29,6 +26,7 @@
 @media screen and( max-width: 470px) {
     #wrapper{
         padding: 0 10px;
+
     }
 }
 // @media screen and( max-width: 430px) {
@@ -83,6 +81,7 @@ $color-5: #232731;
     background-color: $color-2;
     
 	padding: 0 15px;
+
 }
 #conteiner{
     max-width: 1920px;
@@ -159,8 +158,9 @@ $color-5: #232731;
     overflow: hidden;
 }
 .displayNone{
-    display: none
+    display: none;
 }
+
 
 
 @import "scss_parts/header";
@@ -170,6 +170,7 @@ $color-5: #232731;
 @import "scss_parts/section_accordion-rent__body";
 @import "scss_parts/section__reviews";
 @import "scss_parts/section_contact_body";
+@import "scss_parts/contact_popap";
 @import "scss_parts/footer";
 
 //! style for slider

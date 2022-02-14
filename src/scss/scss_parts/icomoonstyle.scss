@@ -81,6 +81,11 @@
   right: 0;
   cursor: pointer;
 }
+.contact-popap__title-btnClose.icon-plus:before {
+  font-size: $fz-4;
+  top: 0px;
+  right: -5px;
+}
 .icon-rate__star:before {
   content: "\e90a";
   color: #edc5a2;

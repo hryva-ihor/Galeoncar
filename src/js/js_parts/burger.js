@@ -3,17 +3,11 @@ let burgers = document.querySelectorAll('.header__menu, .burger-icon, .app-link'
 let body = document.querySelector(`body`)
 
 // open/close burger menu
-burger.addEventListener("click", (e) => {
+burger.addEventListener("click", () => {
     burgers.forEach(item => item.classList.toggle('menu-open'));
     // body.classList.toggle(`block-scroll`)
 });
 
-// close google maps contakt block
-const contactBlockCloseBtn = document.querySelector('#contactBlockCloseBtn');
-const contactBlock = document.querySelector('#contactBlock');
-contactBlockCloseBtn.addEventListener("click", () => {
-    contactBlock.classList.add("displayNone");
-});
 
 
 
@@ -25,10 +19,6 @@ $(document).mouseup(function (e) {
 
     }
 });
-
-
-
-
 
 
 

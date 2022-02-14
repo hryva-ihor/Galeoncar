@@ -3,17 +3,11 @@ let burgers = document.querySelectorAll('.header__menu, .burger-icon, .app-link'
 let body = document.querySelector(`body`)
 
 // open/close burger menu
-burger.addEventListener("click", (e) => {
+burger.addEventListener("click", () => {
     burgers.forEach(item => item.classList.toggle('menu-open'));
     // body.classList.toggle(`block-scroll`)
 });
 
-// close google maps contakt block
-const contactBlockCloseBtn = document.querySelector('#contactBlockCloseBtn');
-const contactBlock = document.querySelector('#contactBlock');
-contactBlockCloseBtn.addEventListener("click", () => {
-    contactBlock.classList.add("displayNone");
-});
 
 
 
@@ -25,10 +19,6 @@ $(document).mouseup(function (e) {
 
     }
 });
-
-
-
-
 
 
 
@@ -257,6 +247,35 @@ accordion.forEach((item) => {
 
 
 
+// close google maps contakt block
+// close google maps contakt block
+const contactBlockCloseBtn = document.querySelector('#contactBlockCloseBtn');
+const contactBlock = document.querySelector('#contactBlock');
+const wrapper = document.querySelector('#wrapper');
+
+
+contactBlockCloseBtn.addEventListener("click", () => {
+    contactBlock.classList.add("displayNone");
+});
+
+
+// open/close fixed popap contact block
+const contactPopapBlock = document.querySelector('#contactPopap');
+const contactLinkBtn = document.querySelectorAll('#contact-linkbtn, #contact-linkbtn-footer');
+contactLinkBtn.forEach(item => item.addEventListener("click", (e) => {
+    // console.log(`click`);
+    wrapper.classList.add("overlay");
+    contactPopapBlock.classList.add("displayBlock");
+    burgers.forEach(item => item.classList.toggle('menu-open'));
+}));
+
+
+const contactPopapCloseBtn = document.querySelector('#contact-popap__title-btnClose');
+contactPopapCloseBtn.addEventListener("click", () => {
+    // console.log(`click`);
+    contactPopapBlock.classList.remove("displayBlock");
+    wrapper.classList.remove("overlay");
+});
 
 function initMap() {
     let myLatLng = {lat: 50.44900762437147, lng: 30.46055098217495};
@@ -283,9 +302,9 @@ function initMap() {
 
 
 // slow csroll ankor link
-var $page = $('html, body');
+let slowAnker = $('html, body');
 $('a[href*="#"]').click(function() {
-    $page.animate({
+    slowAnker.animate({
         scrollTop: $($.attr(this, 'href')).offset().top
     }, 400);
     return false;
