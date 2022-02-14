@@ -1,11 +1,14 @@
 const burger = document.querySelector(`#burger-icon`);
 let burgers = document.querySelectorAll('.header__menu, .burger-icon, .app-link');
 let body = document.querySelector(`body`)
-burger.addEventListener("click", () => {
+
+// open/close burger menu
+burger.addEventListener("click", (e) => {
     burgers.forEach(item => item.classList.toggle('menu-open'));
     // body.classList.toggle(`block-scroll`)
 });
 
+// close google maps contakt block
 const contactBlockCloseBtn = document.querySelector('#contactBlockCloseBtn');
 const contactBlock = document.querySelector('#contactBlock');
 contactBlockCloseBtn.addEventListener("click", () => {
@@ -14,7 +17,35 @@ contactBlockCloseBtn.addEventListener("click", () => {
 
 
 
+// close menu onclick without menu
+$(document).mouseup(function (e) {
+    // console.log(e.target.classList.value);
+    if ($(burgers).has(e.target).length === 0  && $(burger).hasClass(`menu-open`)){
+        burgers.forEach(item => item.classList.toggle('menu-open'));
 
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// $('#burger-icon').click(function(){
+//     if($(`#burger-icon`).hasClass('menu-open')){
+//         $(`#burger-icon`).removeClass('menu-open')
+//       }
+//   });
 
 // $(document).click( function(e){
 //     if ( $(e.target).closest('.header__menu-lists').length ) {
@@ -41,13 +72,12 @@ contactBlockCloseBtn.addEventListener("click", () => {
 // //   if (event.target.closest(".menu__button")) {
 // //     menuBody.classList.toggle("_active");
 // //   }
-//     for(var i=0; i<event.target.children.length; i++){
+//     for(let i=0; i<event.target.children.length; i++){
 //         event.preventDefault()
 //         console.log(event.target.children[i].classList.value );
-//         console.log(typeof(event.target.children[i].classList.value.length)  );
-//         // event.target.children[i].classList.value == `app-link` ? console.log(`yes`): ``;
+//         event.target.children[i].classList.value == `app-link` ? console.log(`yes`): ``;
 //         // event.target.children[i] ==
-//         if (event.target.children[i].classList.value != `header__menu-lists-item` || event.target.children[i].classList.value.length != 0 || event.target.children[i].classList.value != `header__menu-lists`) {
+//         if (event.target.children[i].classList.value != `header__menu-lists-item` || event.target.children[i].classList.value != `header__menu-lists`) {
 //             burger.classList.remove("menu-open");
 //             body.classList.remove(`block-scroll`);
 //             burgers.forEach(item => item.classList.remove('menu-open'));
