@@ -1,0 +1,202 @@
+.logged-popap{
+    position: fixed;
+    top: -100%;
+    left: 50%;
+    transform: translate(-50%, -500%);
+    z-index:100;
+    transition:all .6s;
+    >div{
+        display: flex;
+        justify-content: space-around;
+        
+    }
+
+
+}
+.loggedPopapBlock{
+    transform: translate(-50%, 0);
+    top: 10%;
+}
+
+.form-loggin {
+    background-color: $color-5;
+    flex: 0 1 380px;
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    .form-loggin-close-btn{
+        display: block;
+        width: 30px;
+        height: 30px;
+        background-color: $color-5;
+        position: absolute;
+        right: -10px;
+        top: -10px;
+        border-radius: 50%;
+        box-shadow:0px 0px 19px 0px rgb(138, 132, 132);
+        &::after{
+            content: "\e909";
+            font-family: 'icomoon' !important;
+            display: block;
+            color: $color-1;
+            font-size: 30px;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            cursor: pointer;
+        }
+    }
+    
+    .form {
+        // background-color: $color-5;
+
+		&__item {
+            &:last-child{
+                display: flex;
+                justify-content: center;
+            }
+            p{
+                font-style: normal;
+                font-weight: normal;
+                font-size: $fz-1;
+                align-items: center;
+                letter-spacing: 0.05em;
+                color: $color-1;
+                opacity: 0.9;
+
+            }
+            a{  
+                font-style: normal;
+                font-weight: normal;
+                font-size: $fz-1;
+                align-items: center;
+                letter-spacing: 0.05em;
+                color: $color-3;
+                img:hover{
+                    transform: scale(1.05);
+                }
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+            &.form__item__iconflex{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 20px;
+            }
+
+            &.form__item_btnflex{
+                display: flex;
+                justify-content: space-between;
+            }
+            >div{
+                a:first-child{
+                    display: inline-block;
+                    margin-right: 20px;
+                }
+            }
+		}
+
+		&__button {
+            &:first-child{
+                margin-right: 20px;
+            }
+            background: rgb(65, 72, 91);
+
+            border: 1px solid $color-1;
+            border-radius: 6px;
+            &:hover{
+                border: 1px solid $color-3;
+            }
+            span{
+                display: inline-block;
+                padding: 10px 20px;
+                font-style: normal;
+                font-weight: 600;
+                font-size: $fz-1;
+                text-align: center;
+                text-transform: uppercase;
+                color: $color-1;
+            }
+
+		}
+
+		&__label {
+            display: inline-block;
+            font-style: normal;
+            font-weight: normal;
+            font-size: $fz-1;
+            align-items: center;
+            letter-spacing: 0.05em;
+            color: $color-1;
+            opacity: 0.9;
+            margin-bottom: 5px;
+		}
+
+		&__input {
+            height: 30px;
+            width: 100%;
+            background: rgb(65, 72, 91);
+
+            border: 1px ;
+            border-radius: 6px;
+            padding-left: 10px;
+            color: $color-1;
+            font-size: $fz-1;
+		}
+        .checkbox {
+            display: flex;
+        }
+		&__checkbox {
+            display: none;
+		}
+        &__checkbox:checked + .form__label-checkbox::after{
+            transform: scale(1);
+		}
+        &__label-checkbox{
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            font-style: normal;
+            font-weight: normal;
+            font-size: $fz-1;
+            align-items: center;
+            // letter-spacing: 0.05em;
+            color: $color-1;
+            opacity: 0.9;
+            // margin-bottom: 5px;
+            position: relative;
+        }
+        &__label-checkbox::before{
+            content: "";
+            margin-right: 10px;
+            border-radius: 3px;
+            background-color: transparent;
+            border: 1px solid $color-3;
+            width: $fz-1;
+            height: $fz-1;
+            align-self: flex-start;
+        }
+        &__label-checkbox::after{
+            content: "";
+            width: $fs-001;
+            height: $fs-001;
+            position: absolute;
+            background-image: url(/img/loggin_icon/subtract.svg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: 0 0;
+            top: 3px;
+            left: 2.5px;
+            transform: scale(0);
+        }
+
+
+    }
+}
+

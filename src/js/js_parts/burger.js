@@ -1,7 +1,3 @@
-const burger = document.querySelector(`#burger-icon`);
-let burgers = document.querySelectorAll('.header__menu, .burger-icon, .app-link');
-let body = document.querySelector(`body`)
-
 // open/close burger menu
 burger.addEventListener("click", () => {
     burgers.forEach(item => item.classList.toggle('menu-open'));

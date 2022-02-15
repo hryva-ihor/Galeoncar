@@ -1,5 +1,5 @@
 
-const accordion = document.querySelectorAll(".head, .hidden");
+
 
 accordion.forEach((item) => {
   item.addEventListener("click", function() {

@@ -1,7 +1,9 @@
-@@include('js_parts/burger.js'),
+@@include('js_parts/variables.js')
+@@include('js_parts/burger.js')
 @@include('js_parts/slicksettings.js')
 @@include('js_parts/accordeon.js')
 @@include('js_parts/popap.js')
+@@include('js_parts/rent_car_hover.js')
 
 @@include('js_parts/google_maps.js')
 

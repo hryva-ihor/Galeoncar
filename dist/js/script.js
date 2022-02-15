@@ -1,6 +1,31 @@
+//! from ('js_parts/accordeon.js')
+const accordion = document.querySelectorAll(".head, .hidden");
+
+//! from ('js_parts/burger.js'),
 const burger = document.querySelector(`#burger-icon`);
-let burgers = document.querySelectorAll('.header__menu, .burger-icon, .app-link');
-let body = document.querySelector(`body`)
+const burgers = document.querySelectorAll('.header__menu, .burger-icon, .app-link');
+const body = document.querySelector(`body`);
+
+//! from   ('js_parts/popap.js')
+// close google maps contakt block
+const contactBlockCloseBtn = document.querySelector('#contactBlockCloseBtn');
+
+// open/close  popap contact block
+const contactPopapBlock = document.querySelector('#contactPopap');
+const contactLinkBtn = document.querySelectorAll('#contact-linkbtn, #contact-linkbtn-footer');
+const contactPopapCloseBtn = document.querySelector('#contact-popap__title-btnClose');
+const contactBlock = document.querySelector('#contactBlock');
+const wrapper = document.querySelector('#wrapper');
+
+// open/close loggin
+const logginBtn = document.querySelectorAll('#loggin-btn-header, #loggin-btn-footer');
+const loggedPopap = document.querySelector('.logged-popap');
+const loggedPopapCloseBtn = document.querySelector('.form-loggin-close-btn');
+
+//! from ('js_parts/rent_car_hover.js')
+const rentItem = document.querySelectorAll(`.rent-type__aboute-item`);
+const rentItemText = document.querySelectorAll(`.rent-type__aboute-item-text`);
+const rentItemBtn = document.querySelectorAll(`.rent-type__aboute-item-btn`);
 
 // open/close burger menu
 burger.addEventListener("click", () => {
@@ -117,7 +142,7 @@ $(document).mouseup(function (e) {
 //     }
 
 //     lastScrollTop = ScrollPosition <= 0 ? 0 : ScrollPosition; // For Mobile or negative scrolling 
-// });,
+// });
 
 $(document).ready(function(){
     // !    slider for section__rent-car.scss                              
@@ -227,7 +252,7 @@ $(document).ready(function(){
 
 
 
-const accordion = document.querySelectorAll(".head, .hidden");
+
 
 accordion.forEach((item) => {
   item.addEventListener("click", function() {
@@ -247,22 +272,18 @@ accordion.forEach((item) => {
 
 
 
+// !close google maps contakt block
 // close google maps contakt block
-// close google maps contakt block
-const contactBlockCloseBtn = document.querySelector('#contactBlockCloseBtn');
-const contactBlock = document.querySelector('#contactBlock');
-const wrapper = document.querySelector('#wrapper');
-
-
 contactBlockCloseBtn.addEventListener("click", () => {
     contactBlock.classList.add("displayNone");
 });
 
 
-// open/close fixed popap contact block
-const contactPopapBlock = document.querySelector('#contactPopap');
-const contactLinkBtn = document.querySelectorAll('#contact-linkbtn, #contact-linkbtn-footer');
+//! open/close fixed popap contact block
 contactLinkBtn.forEach(item => item.addEventListener("click", (e) => {
+    let scrollX = window.scrollX
+    let scrollY = window.scrollY;
+    window.onscroll = function () { window.scrollTo(scrollX, scrollY); };
     // console.log(`click`);
     wrapper.classList.add("overlay");
     // body.classList.add("block-scroll");
@@ -272,14 +293,74 @@ contactLinkBtn.forEach(item => item.addEventListener("click", (e) => {
     }
 }));
 
-
-const contactPopapCloseBtn = document.querySelector('#contact-popap__title-btnClose');
 contactPopapCloseBtn.addEventListener("click", () => {
     // console.log(`click`);
     contactPopapBlock.classList.remove("displayBlock");
     wrapper.classList.remove("overlay");
+    window.onscroll = function () { return false };
     // body.classList.remove("block-scroll");
 });
+
+// ! open/close loggin popap       
+logginBtn.forEach(item =>{
+    item.addEventListener("click", (e) => {
+    let scrollX = window.scrollX
+    let scrollY = window.scrollY;
+    window.onscroll = function () { window.scrollTo(scrollX, scrollY); };
+    console.log(`click`);
+    loggedPopap.classList.add("loggedPopapBlock");
+    wrapper.classList.add("overlay");
+    if(burger.classList.contains('menu-open')){
+        burgers.forEach(item => item.classList.toggle('menu-open'));
+    }
+
+})});
+loggedPopapCloseBtn.addEventListener("click", () => {
+    // console.log(`click`);
+    loggedPopap.classList.remove("loggedPopapBlock");
+    wrapper.classList.remove("overlay");
+    window.onscroll = function () { return false };
+    // body.classList.remove("block-scroll");
+});
+
+
+// rentItem.forEach(item => {
+//     item.addEventListener("mouseenter", ( event )  =>{
+//         console.log(item.children[1].classList);
+//         item.children[1].classList.add('rentTextBlock')
+// })});
+
+rentItem.forEach( item => { 
+    item.onmouseover = (e) => {
+        // console.log(item.children[2]);
+        item.children[1].classList.add(`rentTextBlock`)
+        item.children[2].classList.add(`rentBtnBorder`)
+        console.log(document.body.scrollHeight);
+        console.log(window.pageYOffset); 
+    }
+})
+rentItem.forEach( item => { 
+    item.onmouseout = (e) => {
+        // console.log(item.children[1].classList);
+        item.children[1].classList.remove(`rentTextBlock`)
+        item.children[2].classList.remove(`rentBtnBorder`)
+    }
+})
+
+
+
+// const sidehovers = document.querySelectorAll(`.
+// test__item`);
+// console.log(sidehovers)
+// sidehovers.forEach(function (item) {
+// item.onmouseover = () => {
+// sidehovers.forEach(item => item.classList.add(`off`));
+// item.classList.remove(`off`);
+// }
+// });
+// document.querySelector(`.test__box`).onmouseout = () => {
+// sidehovers.forEach(item => item.classList.remove(`off`));
+// }
 
 function initMap() {
     let myLatLng = {lat: 50.44900762437147, lng: 30.46055098217495};
