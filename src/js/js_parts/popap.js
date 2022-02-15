@@ -16,8 +16,11 @@ const contactLinkBtn = document.querySelectorAll('#contact-linkbtn, #contact-lin
 contactLinkBtn.forEach(item => item.addEventListener("click", (e) => {
     // console.log(`click`);
     wrapper.classList.add("overlay");
+    // body.classList.add("block-scroll");
     contactPopapBlock.classList.add("displayBlock");
-    burgers.forEach(item => item.classList.toggle('menu-open'));
+    if(burger.classList.contains('menu-open')){
+        burgers.forEach(item => item.classList.toggle('menu-open'));
+    }
 }));
 
 
@@ -26,4 +29,5 @@ contactPopapCloseBtn.addEventListener("click", () => {
     // console.log(`click`);
     contactPopapBlock.classList.remove("displayBlock");
     wrapper.classList.remove("overlay");
+    // body.classList.remove("block-scroll");
 });
