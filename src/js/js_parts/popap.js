@@ -33,7 +33,7 @@ logginBtn.forEach(item =>{
     let scrollX = window.scrollX
     let scrollY = window.scrollY;
     window.onscroll = function () { window.scrollTo(scrollX, scrollY); };
-    console.log(`click`);
+    // console.log(`click`);
     loggedPopap.classList.add("loggedPopapBlock");
     wrapper.classList.add("overlay");
     if(burger.classList.contains('menu-open')){

@@ -10,8 +10,8 @@ rentItem.forEach( item => {
         // console.log(item.children[2]);
         item.children[1].classList.add(`rentTextBlock`)
         item.children[2].classList.add(`rentBtnBorder`)
-        console.log(document.body.scrollHeight);
-        console.log(window.pageYOffset); 
+        // console.log(document.body.scrollHeight);
+        // console.log(window.pageYOffset); 
     }
 })
 rentItem.forEach( item => { 

@@ -1,6 +1,13 @@
 // open/close burger menu
 burger.addEventListener("click", () => {
+    // let scrollX = client.scrollX
+    // if(window.innerWidth<=1240 && !burger.classList.contains('menu-open')){
+    //     wrapper.classList.add("overlay");
+    //     body.classList.add("block-scroll");
+    // }
     burgers.forEach(item => item.classList.toggle('menu-open'));
+        // wrapper.classList.toggle("overlay");
+        // body.classList.toggle("block-scroll");
     // body.classList.toggle(`block-scroll`)
 });
 

@@ -29,7 +29,14 @@ const rentItemBtn = document.querySelectorAll(`.rent-type__aboute-item-btn`);
 
 // open/close burger menu
 burger.addEventListener("click", () => {
+    // let scrollX = client.scrollX
+    // if(window.innerWidth<=1240 && !burger.classList.contains('menu-open')){
+    //     wrapper.classList.add("overlay");
+    //     body.classList.add("block-scroll");
+    // }
     burgers.forEach(item => item.classList.toggle('menu-open'));
+        // wrapper.classList.toggle("overlay");
+        // body.classList.toggle("block-scroll");
     // body.classList.toggle(`block-scroll`)
 });
 
@@ -307,7 +314,7 @@ logginBtn.forEach(item =>{
     let scrollX = window.scrollX
     let scrollY = window.scrollY;
     window.onscroll = function () { window.scrollTo(scrollX, scrollY); };
-    console.log(`click`);
+    // console.log(`click`);
     loggedPopap.classList.add("loggedPopapBlock");
     wrapper.classList.add("overlay");
     if(burger.classList.contains('menu-open')){
@@ -335,8 +342,8 @@ rentItem.forEach( item => {
         // console.log(item.children[2]);
         item.children[1].classList.add(`rentTextBlock`)
         item.children[2].classList.add(`rentBtnBorder`)
-        console.log(document.body.scrollHeight);
-        console.log(window.pageYOffset); 
+        // console.log(document.body.scrollHeight);
+        // console.log(window.pageYOffset); 
     }
 })
 rentItem.forEach( item => { 
