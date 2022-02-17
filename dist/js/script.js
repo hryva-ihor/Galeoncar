@@ -457,6 +457,25 @@ autoparkCarouselItem.forEach( item => {
 })
 
 // classList.add(`autoparkCarouselItemTextBlock`)
+const toTopBtn = document.querySelector('.to-up');
+document.addEventListener('DOMContentLoaded', () => {
+    
+
+    window.onscroll = function () {
+    if (window.pageYOffset > 580) {
+        toTopBtn.style.display = 'block'
+    } else {
+        toTopBtn.style.display = 'none'
+    }
+    }})
+
+    // плавный скролл наверх
+    toTopBtn.addEventListener('click', function () {
+    window.scrollBy({
+        top: -document.documentElement.scrollHeight,
+        behavior: 'smooth'
+    })
+    });
 
 function initMap() {
     let myLatLng = {lat: 50.44900762437147, lng: 30.46055098217495};

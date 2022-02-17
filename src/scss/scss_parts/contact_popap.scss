@@ -36,7 +36,24 @@
             padding: 10px 20px;
             // z-index: 100;
             position: relative;
+            .contact-popap__title-btnClose{
+                position: absolute;
+                top: -8px;
+                right: -8px;
+                display: inline-block;
+                width: $fz-3;
+                height: $fz-3;
+                border-radius: 50%;
+                background-color: $color-5;
+                box-shadow: 0 0 19px 0 #8a8484;
+            }
+            .contact-popap__title-btnClose.icon-plus:before {
+                    font-size: $fz-3;
+                    right: -7px;
 
+
+
+            }
         }
 
 

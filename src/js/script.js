@@ -5,6 +5,7 @@
 @@include('js_parts/popap.js')
 @@include('js_parts/rent_car_hover.js')
 @@include('js_parts/autopark_carousel_hover.js')
+@@include('js_parts/to_top_button.js')
 
 @@include('js_parts/google_maps.js')
 

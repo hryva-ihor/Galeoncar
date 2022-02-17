@@ -226,9 +226,9 @@ a {
 }
 
 .contact-popap__title-btnClose.icon-plus:before {
-  font-size: 7.2rem;
+  font-size: 1.8rem;
   top: 0px;
-  right: -5px;
+  right: 0px;
 }
 
 .icon-rate__star:before {
@@ -385,6 +385,28 @@ section {
 .btn-offer-car:hover {
   color: #15171e;
   background-color: #FFFFFF;
+}
+
+.to-up {
+  position: fixed;
+  width: 4.2rem;
+  height: 4.2rem;
+  bottom: 28px;
+  right: 28px;
+  display: none;
+  text-align: center;
+  line-height: 4.2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #EDC5A2;
+  z-index: 100000;
+  transition: all 0.2s ease-in-out;
+}
+
+.to-up:hover {
+  box-shadow: 0 0 19px 0 #edc5a25e;
+  transform: scale(1.05);
+  transition: all 0.2s ease-in-out;
 }
 
 .block-scroll {
@@ -1395,6 +1417,23 @@ section {
   text-transform: uppercase;
   padding: 10px 20px;
   position: relative;
+}
+
+.contact-popap__title .contact-popap__title-btnClose {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  display: inline-block;
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 50%;
+  background-color: #232731;
+  box-shadow: 0 0 19px 0 #8a8484;
+}
+
+.contact-popap__title .contact-popap__title-btnClose.icon-plus:before {
+  font-size: 4.2rem;
+  right: -7px;
 }
 
 .contact-popap__item {
