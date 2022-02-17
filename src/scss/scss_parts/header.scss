@@ -129,25 +129,26 @@
     }
 
 }
-@media screen and (max-width: 410px) {
-    .header {
+// @media screen and (max-width: 410px) {
+//     .header {
     
-        &__logo-lion {
-            max-width: 20px;
-        }
+//         &__logo-lion {
+//             max-width: 20px;
+//         }
     
-        &__logo-text {
-            max-width: 70px;
-        }
-    }
+//         &__logo-text {
+//             max-width: 70px;
+//         }
+//     }
 
-}
+// }
 // !        social icons        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 .social {
 
     &__icons {
         display: flex;
         gap: 10px;
+        margin-top: 5px;
     }
 
     &__icons a:hover {

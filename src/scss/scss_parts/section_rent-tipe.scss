@@ -44,10 +44,11 @@
         color: $color-1;
         position: absolute;
         top: 0;
-        background: $color-5;
+        background: #232731cc;
         width: 100%;
         height: 100%;
         padding: 40px;
+        transition: all 0.2 ease-in-out;
     }
 
     &__aboute-item-btn {
@@ -180,6 +181,7 @@
 }
 .rentTextBlock{
     display: block;
+    transition: all 0.2 ease-in-out;
 }
 .rentBtnBorder {
     span{

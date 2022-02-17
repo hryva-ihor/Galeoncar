@@ -27,3 +27,7 @@ const loggedPopapCloseBtn = document.querySelector('.form-loggin-close-btn');
 const rentItem = document.querySelectorAll(`.rent-type__aboute-item`);
 const rentItemText = document.querySelectorAll(`.rent-type__aboute-item-text`);
 const rentItemBtn = document.querySelectorAll(`.rent-type__aboute-item-btn`);
+
+
+//! from    js_parts/autopark_carousel_hover
+const autoparkCarouselItem = document.querySelectorAll(`.autopark__carousel-item`);

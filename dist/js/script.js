@@ -28,6 +28,10 @@ const rentItem = document.querySelectorAll(`.rent-type__aboute-item`);
 const rentItemText = document.querySelectorAll(`.rent-type__aboute-item-text`);
 const rentItemBtn = document.querySelectorAll(`.rent-type__aboute-item-btn`);
 
+
+//! from    js_parts/autopark_carousel_hover
+const autoparkCarouselItem = document.querySelectorAll(`.autopark__carousel-item`);
+
 // open/close burger menu
 burger.addEventListener("click", () => {
 
@@ -65,6 +69,17 @@ headerAnker.forEach(item => item.addEventListener("click", () => {
     burgers.forEach(item => item.classList.toggle('menu-open'));
     }
 }));
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 1240) {
+        burgers.forEach(item => item.classList.remove('menu-open'));
+        wrapper.classList.remove("overlay");
+        body.classList.remove("block-scroll");
+        headerBody.classList.remove("positionRelativeHeader");
+    }
+});
+
+
 
 
 // window.addEventListener("scroll", function () {
@@ -421,6 +436,27 @@ rentItem.forEach( item => {
 // document.querySelector(`.test__box`).onmouseout = () => {
 // sidehovers.forEach(item => item.classList.remove(`off`));
 // }
+autoparkCarouselItem.forEach( item => { 
+    item.onmouseover = (e) => {
+        // console.log(`mause_on`);
+
+        // console.log(item.children[1].classList.add(`autoparkCarouselItemTextBlock`));
+        item.children[1].classList.add(`autoparkCarouselItemTextBlock`)
+        // item.children[2].classList.add(`autoparkCarouselItemTextBlock`)
+        // console.log(document.body.scrollHeight);
+        // console.log(window.pageYOffset); 
+    }
+})
+autoparkCarouselItem.forEach( item => { 
+    item.onmouseout = (e) => {
+        // console.log(`mause_leave`);
+        item.children[1].classList.remove(`autoparkCarouselItemTextBlock`)
+        // console.log(item.children[1].classList);
+        // item.children[2].classList.remove(`rentBtnBorder`)
+    }
+})
+
+// classList.add(`autoparkCarouselItemTextBlock`)
 
 function initMap() {
     let myLatLng = {lat: 50.44900762437147, lng: 30.46055098217495};
@@ -454,3 +490,4 @@ $('a[href*="#"]').click(function() {
     }, 400);
     return false;
 });
+

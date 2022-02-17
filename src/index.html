@@ -4,7 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="description"
+    content="Аренда автомобиля для особых целей.">
+    <meta property="og:url" content="https://hryva-ihor.github.io/Galeoncar/dist/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Galeoncar - аренда автомобиля для особых целей." />
+    <meta property="og:description"
+    content="Аренда автомобиля под любые задачи." />
+    <meta property="og:image" content="https://hryva-ihor.github.io/Galeoncar/dist/metacar.png" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.min.css">
     <title>Galeoncar</title>
 </head>
 <body>
@@ -58,7 +67,7 @@
                                     Провести незабываемую фотосессию. Или элегантно приехать на бизнес встречу. Устроить романтическое свидание по ночному городу или арендовать автомобиль на свадьбу.
                                 </p>
                             </div>
-                            <a class="rent-type__aboute-item-btn" href="#"><span>с водителем</span></a>
+                            <a id="loggin-btn-header" class="rent-type__aboute-item-btn" href="#"><span>с водителем</span></a>
                         </div>
                         <div class="rent-type__aboute-item">
                             <div class="rent-type__aboute-item-img">
@@ -70,7 +79,7 @@
                                     Провести незабываемую фотосессию. Или элегантно приехать на бизнес встречу. Устроить романтическое свидание по ночному городу или арендовать автомобиль на свадьбу.
                                     </p>
                             </div>
-                            <a class="rent-type__aboute-item-btn" href="#"><span>для особых целей</span></a>
+                            <a id="loggin-btn-header" class="rent-type__aboute-item-btn" href="#"><span>для особых целей</span></a>
                         </div>
                         <div class="rent-type__aboute-item">
                             <div class="rent-type__aboute-item-img">
@@ -82,7 +91,7 @@
                                     Провести незабываемую фотосессию. Или элегантно приехать на бизнес встречу. Устроить романтическое свидание по ночному городу или арендовать автомобиль на свадьбу.
                                     </p>
                             </div>
-                            <a class="rent-type__aboute-item-btn" href="#"><span>без водителя</span></a>
+                            <a id="loggin-btn-header" class="rent-type__aboute-item-btn" href="#"><span>без водителя</span></a>
                         </div>
                     </div>
                     
@@ -104,19 +113,92 @@
                         <div class="autopark__carousel">
                             <!-- todo leazyload -->
                             <!-- <div class="autopark__carousel-item"><img data-lazy="img/autopark-slider/Frame3.png"  alt="car"></div> -->
-                            <div class="autopark__carousel-item"><img src="img/autoperk_block_clider/Audi-A4-Avant-1-960x550.png" alt="car">
+                            <div class="autopark__carousel-item">
+                                <img src="img/autoperk_block_clider/Audi-A4-Avant-1-960x550.png" alt="car">
+                                <div class="autopark__carousel-item-text">
+                                    <div>
+                                        <span>Мерседес</span>
+                                        <span>Майбах</span>
+                                        <span>Кроссовер</span>
+                                    </div>
+                                    <a id="loggin-btn-header" class="btn-offer-car btn-offer-car__autocarousel" href="#">ЗАКАЗАТЬ МАШИНУ</a>
+                                </div>
                             </div>
-                            <div class="autopark__carousel-item"><img src="img/autoperk_block_clider/bmw-3-series-sedan-wallpaper-1920x1200-05-960x550.png" alt="car">
+                            <div class="autopark__carousel-item">
+                                <img src="img/autoperk_block_clider/bmw-3-series-sedan-wallpaper-1920x1200-05-960x550.png" alt="car">
+                                <div class="autopark__carousel-item-text">
+                                    <div>
+                                        <span>Мерседес</span>
+                                        <span>Майбах</span>
+                                        <span>Кроссовер</span>
+                                    </div>
+                                    <a id="loggin-btn-header" class="btn-offer-car btn-offer-car__autocarousel" href="#">ЗАКАЗАТЬ МАШИНУ</a>
+                                </div>
                             </div>
-                            <div class="autopark__carousel-item"><img src="img/autoperk_block_clider/Porsche-Panamera-960x550.png" alt="car"></div>
-                            <div class="autopark__carousel-item"><img src="img/autoperk_block_clider/Audi-A4-Avant-1-960x550.png" alt="car">
+                            <div class="autopark__carousel-item">
+                                <img src="img/autoperk_block_clider/Porsche-Panamera-960x550.png" alt="car">
+                                <div class="autopark__carousel-item-text">
+                                    <div>
+                                        <span>Мерседес</span>
+                                        <span>Майбах</span>
+                                        <span>Кроссовер</span>
+                                    </div>
+                                    <a id="loggin-btn-header" class="btn-offer-car btn-offer-car__autocarousel" href="#">ЗАКАЗАТЬ МАШИНУ</a>
+                                </div>
                             </div>
-                            <div class="autopark__carousel-item"><img src="img/autoperk_block_clider/bmw-3-series-sedan-wallpaper-1920x1200-05-960x550.png" alt="car">
+                            <div class="autopark__carousel-item">
+                                <img src="img/autoperk_block_clider/Audi-A4-Avant-1-960x550.png" alt="car">
+                                <div class="autopark__carousel-item-text">
+                                    <div>
+                                        <span>Мерседес</span>
+                                        <span>Майбах</span>
+                                        <span>Кроссовер</span>
+                                    </div>
+                                    <a id="loggin-btn-header" class="btn-offer-car btn-offer-car__autocarousel" href="#">ЗАКАЗАТЬ МАШИНУ</a>
+                                </div>
                             </div>
-                            <div class="autopark__carousel-item"><img src="img/autoperk_block_clider/Porsche-Panamera-960x550.png" alt="car"></div>
-                            <div class="autopark__carousel-item"><img src="img/autoperk_block_clider/Audi-A4-Avant-1-960x550.png" alt="car">
+                            <div class="autopark__carousel-item">
+                                <img src="img/autoperk_block_clider/bmw-3-series-sedan-wallpaper-1920x1200-05-960x550.png" alt="car">
+                                <div class="autopark__carousel-item-text">
+                                    <div>
+                                        <span>Мерседес</span>
+                                        <span>Майбах</span>
+                                        <span>Кроссовер</span>
+                                    </div>
+                                    <a id="loggin-btn-header" class="btn-offer-car btn-offer-car__autocarousel" href="#">ЗАКАЗАТЬ МАШИНУ</a>
+                                </div>
                             </div>
-                            <div class="autopark__carousel-item"><img src="img/autoperk_block_clider/bmw-3-series-sedan-wallpaper-1920x1200-05-960x550.png" alt="car">
+                            <div class="autopark__carousel-item">
+                                <img src="img/autoperk_block_clider/Porsche-Panamera-960x550.png" alt="car">
+                                <div class="autopark__carousel-item-text">
+                                    <div>
+                                        <span>Мерседес</span>
+                                        <span>Майбах</span>
+                                        <span>Кроссовер</span>
+                                    </div>
+                                    <a id="loggin-btn-header" class="btn-offer-car btn-offer-car__autocarousel" href="#">ЗАКАЗАТЬ МАШИНУ</a>
+                                </div></div>
+                            <div class="autopark__carousel-item">
+                                <img src="img/autoperk_block_clider/Audi-A4-Avant-1-960x550.png" alt="car">
+                                <div class="autopark__carousel-item-text">
+                                    <div>
+                                        <span>Мерседес</span>
+                                        <span>Майбах</span>
+                                        <span>Кроссовер</span>
+                                    </div>
+                                    <a id="loggin-btn-header" class="btn-offer-car btn-offer-car__autocarousel" href="#">ЗАКАЗАТЬ МАШИНУ</a>
+                                </div>
+                            </div>
+                            <div class="autopark__carousel-item">
+                                <img src="img/autoperk_block_clider/bmw-3-series-sedan-wallpaper-1920x1200-05-960x550.png" alt="car">
+                                <div class="autopark__carousel-item-text">
+                                    <div>
+                                        <span>Мерседес</span>
+                                        <span>Майбах</span>
+                                        <span>Кроссовер</span>
+                                    </div>
+                                    <a id="loggin-btn-header" class="btn-offer-car btn-offer-car__autocarousel" href="#">ЗАКАЗАТЬ МАШИНУ</a>
+                                </div>
                             </div>
                             
                             
@@ -326,7 +408,18 @@
                                             Tony has more than 10 years of experience, building and implementing startups. Tom has his master’s degree in Analytics, and a bachelor’s degree in Psychology from University of London. As CTO of Flexo, Tony projects the vision of the company by directing its strategic technology investments. Before Flexo, Tony was Senior Director of Research and Modeling at CDA Insurance, where he managed a team of developers. 
                                         </p>
                                         <div class="carousel-reviews__item-rate">
-                                            <img class="carousel-reviews__item-star" src="img/rate-star.png" alt="rate-star"><span class="carousel-reviews__item-aboute"><a href="#">Подробнее...</a></span>
+                                            <div class="rating-area">
+                                                <input type="radio" id="star-5" name="rating" value="5">
+                                                <label for="star-5" title="Оценка «5»"></label>	
+                                                <input type="radio" id="star-4" name="rating" value="4">
+                                                <label for="star-4" title="Оценка «4»"></label>    
+                                                <input type="radio" id="star-3" name="rating" value="3">
+                                                <label for="star-3" title="Оценка «3»"></label>  
+                                                <input type="radio" id="star-2" name="rating" value="2">
+                                                <label for="star-2" title="Оценка «2»"></label>    
+                                                <input type="radio" id="star-1" name="rating" value="1">
+                                                <label for="star-1" title="Оценка «1»"></label>
+                                            </div><span class="carousel-reviews__item-aboute"><a id="loggin-btn-header" href="#">Подробнее...</a></span>
                                         </div>
                                     </div>
                                     <div class="carousel-reviews__item">
@@ -335,7 +428,18 @@
                                             As CTO of Flexo, Tony projects the vision of the company by directing its strategic technology investments. Before Flexo, Tony was Senior Director of Research and Modeling at CDA Insurance, where he managed a team of developers. Tom has his master’s degree in Analytics, and a bachelor’s degree in Psychology from University of London.Tony has more than 10 years of experience, building and implementing startups. 
                                         </p>
                                         <div class="carousel-reviews__item-rate">
-                                            <img class="carousel-reviews__item-star" src="img/rate-star.png" alt="rate-star"><span class="carousel-reviews__item-aboute"><a href="#">Подробнее...</a></span>
+                                            <div class="rating-area">
+                                                <input type="radio" id="star-5" name="rating" value="5">
+                                                <label for="star-5" title="Оценка «5»"></label>	
+                                                <input type="radio" id="star-4" name="rating" value="4">
+                                                <label for="star-4" title="Оценка «4»"></label>    
+                                                <input type="radio" id="star-3" name="rating" value="3">
+                                                <label for="star-3" title="Оценка «3»"></label>  
+                                                <input type="radio" id="star-2" name="rating" value="2">
+                                                <label for="star-2" title="Оценка «2»"></label>    
+                                                <input type="radio" id="star-1" name="rating" value="1">
+                                                <label for="star-1" title="Оценка «1»"></label>
+                                            </div><span class="carousel-reviews__item-aboute"><a id="loggin-btn-header" href="#">Подробнее...</a></span>
                                         </div>
                                     </div>
                                     <div class="carousel-reviews__item">
@@ -344,7 +448,18 @@
                                             Tony has more than 10 years of experience, building and implementing startups. As CTO of Flexo, , Tony was Senior Director of Research and Modeling at CDA Insurance, where he managed a team of developers. Tom has his master’s degree in Analytics, and a bachelor’s degree in Psychology from University of London Tony projects the vision of the company by directing its strategic technology investments. Before Flexo.
                                         </p>
                                         <div class="carousel-reviews__item-rate">
-                                            <img class="carousel-reviews__item-star" src="img/rate-star.png" alt="rate-star"><span class="carousel-reviews__item-aboute"><a href="#">Подробнее...</a></span>
+                                            <div class="rating-area">
+                                                <input type="radio" id="star-5" name="rating" value="5">
+                                                <label for="star-5" title="Оценка «5»"></label>	
+                                                <input type="radio" id="star-4" name="rating" value="4">
+                                                <label for="star-4" title="Оценка «4»"></label>    
+                                                <input type="radio" id="star-3" name="rating" value="3">
+                                                <label for="star-3" title="Оценка «3»"></label>  
+                                                <input type="radio" id="star-2" name="rating" value="2">
+                                                <label for="star-2" title="Оценка «2»"></label>    
+                                                <input type="radio" id="star-1" name="rating" value="1">
+                                                <label for="star-1" title="Оценка «1»"></label>
+                                            </div><span class="carousel-reviews__item-aboute"><a id="loggin-btn-header" href="#">Подробнее...</a></span>
                                         </div>
                                     </div>
                                     <div class="carousel-reviews__item">
@@ -353,7 +468,18 @@
                                             Director of Research and Modeling at CDA Insurance, where he managed a team of developers. Tom has his master’s degree in Analytics Tony has more than 10 years of experience, building and implementing startups. As CTO of Flexo, Tony projects the vision of the company by directing its strategic technology investments. Before Flexo, Tony was Senior , and a bachelor’s degree in Psychology from University of London.
                                         </p>
                                         <div class="carousel-reviews__item-rate">
-                                            <img class="carousel-reviews__item-star" src="img/rate-star.png" alt="rate-star"><span class="carousel-reviews__item-aboute"><a href="#">Подробнее...</a></span>
+                                            <div class="rating-area">
+                                                <input type="radio" id="star-5" name="rating" value="5">
+                                                <label for="star-5" title="Оценка «5»"></label>	
+                                                <input type="radio" id="star-4" name="rating" value="4">
+                                                <label for="star-4" title="Оценка «4»"></label>    
+                                                <input type="radio" id="star-3" name="rating" value="3">
+                                                <label for="star-3" title="Оценка «3»"></label>  
+                                                <input type="radio" id="star-2" name="rating" value="2">
+                                                <label for="star-2" title="Оценка «2»"></label>    
+                                                <input type="radio" id="star-1" name="rating" value="1">
+                                                <label for="star-1" title="Оценка «1»"></label>
+                                            </div><span class="carousel-reviews__item-aboute"><a id="loggin-btn-header" href="#">Подробнее...</a></span>
                                         </div>
                                     </div>
                                     <div class="carousel-reviews__item">
@@ -362,7 +488,18 @@
                                             Tom has his master’s degree in Analytics, and a bachelor’s degree in Psychology from University of London. Tony has more than 10 years of experience, building and implementing startups. As CTO of Flexo, Tony projects the vision of the company by directing its strategic technology investments. Before Flexo, Tony was Senior Director of Research and Modeling at CDA Insurance, where he managed a team of developers. 
                                         </p>
                                         <div class="carousel-reviews__item-rate">
-                                            <img class="carousel-reviews__item-star" src="img/rate-star.png" alt="rate-star"><span class="carousel-reviews__item-aboute"><a href="#">Подробнее...</a></span>
+                                            <div class="rating-area">
+                                                <input type="radio" id="star-5" name="rating" value="5">
+                                                <label for="star-5" title="Оценка «5»"></label>	
+                                                <input type="radio" id="star-4" name="rating" value="4">
+                                                <label for="star-4" title="Оценка «4»"></label>    
+                                                <input type="radio" id="star-3" name="rating" value="3">
+                                                <label for="star-3" title="Оценка «3»"></label>  
+                                                <input type="radio" id="star-2" name="rating" value="2">
+                                                <label for="star-2" title="Оценка «2»"></label>    
+                                                <input type="radio" id="star-1" name="rating" value="1">
+                                                <label for="star-1" title="Оценка «1»"></label>
+                                            </div><span class="carousel-reviews__item-aboute"><a id="loggin-btn-header" href="#">Подробнее...</a></span>
                                         </div>
                                     </div>
                                     
@@ -402,7 +539,7 @@
                             </div>
                             <div class="border-gradient border-gradient__contact"></div>
                             <div class="contact-block__number">
-                                <a class="btn-offer-car" href="#">ЗАКАЗАТЬ МАШИНУ</a>
+                                <a id="loggin-btn-header" class="btn-offer-car" href="#">ЗАКАЗАТЬ МАШИНУ</a>
                                 <div>
                                     <span class="contact-block__number-phone"><a href="tel:8(995)888-30-94">8 (995) 888-30-94</a></span>
                                     <span class="contact-block__number-text">Звоните или оставляйте заявку</span>

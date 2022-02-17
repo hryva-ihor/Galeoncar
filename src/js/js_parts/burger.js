@@ -36,6 +36,17 @@ headerAnker.forEach(item => item.addEventListener("click", () => {
     }
 }));
 
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 1240) {
+        burgers.forEach(item => item.classList.remove('menu-open'));
+        wrapper.classList.remove("overlay");
+        body.classList.remove("block-scroll");
+        headerBody.classList.remove("positionRelativeHeader");
+    }
+});
+
+
+
 
 // window.addEventListener("scroll", function () {
 //     // let headerMenu = document.getElementsByClassName(`header__menu menu-open`);

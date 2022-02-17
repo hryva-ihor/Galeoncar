@@ -200,3 +200,46 @@
             }
     }
 }
+
+
+
+.rating-area {
+	overflow: hidden;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.rating-area:not(:checked) > input {
+	display: none;
+}
+.rating-area:not(:checked) > label {
+	height: $fz-1;
+	padding: 0;
+	cursor: pointer;
+	font-size: $fz-1;
+	line-height: $fz-1;
+    letter-spacing: 0.5em;
+	color: #edc5a241;
+	// text-shadow: 1px 1px #bbb;
+}
+.rating-area:not(:checked) > label:before {
+	content: '★';
+}
+.rating-area > input:checked ~ label {
+	color: $color-3;
+	// text-shadow: 1px 1px #c60;
+}
+.rating-area:not(:checked) > label:hover,
+.rating-area:not(:checked) > label:hover ~ label {
+	color: $color-3;
+}
+.rating-area > input:checked + label:hover,
+.rating-area > input:checked + label:hover ~ label,
+.rating-area > input:checked ~ label:hover,
+.rating-area > input:checked ~ label:hover ~ label,
+.rating-area > label:hover ~ input:checked ~ label {
+	color: $color-3;
+	// text-shadow: 1px 1px goldenrod;
+}
+.rate-area > label:active {
+	position: relative;
+}
