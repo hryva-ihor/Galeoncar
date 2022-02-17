@@ -5,7 +5,8 @@ const accordion = document.querySelectorAll(".head, .hidden");
 const burger = document.querySelector(`#burger-icon`);
 const burgers = document.querySelectorAll('.header__menu, .burger-icon, .app-link');
 const body = document.querySelector(`body`);
-
+const headerBody = document.querySelector(`.header__body`);
+const headerAnker = document.querySelectorAll(`.linkAnker`);
 //! from   ('js_parts/popap.js')
 // close google maps contakt block
 const contactBlockCloseBtn = document.querySelector('#contactBlockCloseBtn');
@@ -29,30 +30,99 @@ const rentItemBtn = document.querySelectorAll(`.rent-type__aboute-item-btn`);
 
 // open/close burger menu
 burger.addEventListener("click", () => {
-    // let scrollX = client.scrollX
-    // if(window.innerWidth<=1240 && !burger.classList.contains('menu-open')){
-    //     wrapper.classList.add("overlay");
-    //     body.classList.add("block-scroll");
+
+
+        wrapper.classList.toggle("overlay");
+        body.classList.toggle("block-scroll");
+        headerBody.classList.toggle("positionRelativeHeader");
+        //positionRelativeHeader
+    // if(window.innerWidth<=1240 && burger.classList.contains('menu-open')){
+    //     wrapper.classList.remove("overlay");
+    //     body.classList.remove("block-scroll");
     // }
+
     burgers.forEach(item => item.classList.toggle('menu-open'));
-        // wrapper.classList.toggle("overlay");
-        // body.classList.toggle("block-scroll");
-    // body.classList.toggle(`block-scroll`)
+
 });
 
-
-
-
-// close menu onclick without menu
+// // close menu onclick without menu
 $(document).mouseup(function (e) {
     // console.log(e.target.classList.value);
     if ($(burgers).has(e.target).length === 0  && $(burger).hasClass(`menu-open`)){
         burgers.forEach(item => item.classList.toggle('menu-open'));
-
+        wrapper.classList.toggle("overlay");
+        body.classList.toggle("block-scroll");
+        headerBody.classList.toggle("positionRelativeHeader");
     }
 });
 
+headerAnker.forEach(item => item.addEventListener("click", () => {
+    console.log(`click`);
+    if(window.innerWidth <= 1240){
+    wrapper.classList.toggle("overlay");
+    body.classList.toggle("block-scroll");
+    headerBody.classList.toggle("positionRelativeHeader");
+    burgers.forEach(item => item.classList.toggle('menu-open'));
+    }
+}));
 
+
+// window.addEventListener("scroll", function () {
+//     // let headerMenu = document.getElementsByClassName(`header__menu menu-open`);
+//     // let testDivs = Array.prototype.filter.call(headerMenu, function(testElement){
+//     //     return testElement.nodeName;
+//     // });
+//     // console.log(testDivs[0]);
+//     if(window.innerWidth <= 1240 && burger.classList.contains(`menu-open`)){
+//         let headerMenu = document.getElementsByClassName(`header__menu menu-open`);
+//         let testDivs = Array.prototype.filter.call(headerMenu, function(testElement){
+//         return testElement.nodeName;
+//         });
+        
+//         // console.log(testDivs[0].classList);
+//         function offset(el) {
+//             let rect = el.getBoundingClientRect();
+//             console.log(rect.top );
+//             if(rect.top <= 0){
+//                 console.log(testDivs[0]);
+//                 // testDivs[0].classList.add(`positionFixed`)
+//                 // testDivs[0].style.position = `sticky`
+//                 // testDivs[0].style.top = `0`
+//             }
+//             if(rect.top >= 0){
+//                 // testDivs[0].style.position = ``
+//                 // testDivs[0].style.top = ``
+//             }
+//         }
+//         offset(headerMenuLists)
+//     }
+
+// })
+
+
+
+
+
+
+// //    headerMenu.offsetHeight
+// let lastScrollTop = 0;
+// // const headerMenuHeight = document.querySelector(`.header__upper-box`).offsetHeight;
+// window.addEventListener("scroll", function () {
+//     let ScrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+//     let ScrollDirection = ScrollPosition < lastScrollTop ? up : down;
+//     if (window.scrollY >= 80) {
+//         // document.querySelectorAll(`.header, .header__menu`).forEach(item => item.classList.add(`white`));
+//         document.querySelector(`.header`).style.top = -80`px`;
+//     } else {
+//         document.querySelectorAll(`.header, .header__menu`).forEach(item => item.classList.remove(`white`));
+//     }
+//     if (window.scrollY >= 80 && ScrollDirection === `up`) {
+//         document.querySelector(`.header`).style.top = 0;
+//     }
+
+//     lastScrollTop = ScrollPosition <= 0 ? 0 : ScrollPosition; // For Mobile or negative scrolling 
+// });
 
 
 
@@ -132,24 +202,7 @@ $(document).mouseup(function (e) {
 </button> */}
 
 
-// let lastScrollTop = 0;
-// const headerMenuHeight = document.querySelector(`.header__upper-box`).offsetHeight;
-// window.addEventListener("scroll", function () {
-//     let ScrollPosition = window.scrollY || document.documentElement.scrollTop;
 
-//     let ScrollDirection = ScrollPosition < lastScrollTop ? up : down;
-//     if (window.scrollY >= 80) {
-//         document.querySelectorAll(`.header, .header__menu`).forEach(item => item.classList.add(`white`));
-//         document.querySelector(`.header`).style.top = -80`px`;
-//     } else {
-//         document.querySelectorAll(`.header, .header__menu`).forEach(item => item.classList.remove(`white`));
-//     }
-//     if (window.scrollY >= 80 && ScrollDirection === `up`) {
-//         document.querySelector(`.header`).style.top = 0;
-//     }
-
-//     lastScrollTop = ScrollPosition <= 0 ? 0 : ScrollPosition; // For Mobile or negative scrolling 
-// });
 
 $(document).ready(function(){
     // !    slider for section__rent-car.scss                              
@@ -293,7 +346,7 @@ contactLinkBtn.forEach(item => item.addEventListener("click", (e) => {
     window.onscroll = function () { window.scrollTo(scrollX, scrollY); };
     // console.log(`click`);
     wrapper.classList.add("overlay");
-    // body.classList.add("block-scroll");
+    body.classList.add("block-scroll");
     contactPopapBlock.classList.add("displayBlock");
     if(burger.classList.contains('menu-open')){
         burgers.forEach(item => item.classList.toggle('menu-open'));
@@ -305,7 +358,7 @@ contactPopapCloseBtn.addEventListener("click", () => {
     contactPopapBlock.classList.remove("displayBlock");
     wrapper.classList.remove("overlay");
     window.onscroll = function () { return false };
-    // body.classList.remove("block-scroll");
+    body.classList.remove("block-scroll");
 });
 
 // ! open/close loggin popap       
@@ -327,7 +380,7 @@ loggedPopapCloseBtn.addEventListener("click", () => {
     loggedPopap.classList.remove("loggedPopapBlock");
     wrapper.classList.remove("overlay");
     window.onscroll = function () { return false };
-    // body.classList.remove("block-scroll");
+    body.classList.remove("block-scroll");
 });
 
 

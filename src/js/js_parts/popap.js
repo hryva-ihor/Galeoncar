@@ -12,7 +12,7 @@ contactLinkBtn.forEach(item => item.addEventListener("click", (e) => {
     window.onscroll = function () { window.scrollTo(scrollX, scrollY); };
     // console.log(`click`);
     wrapper.classList.add("overlay");
-    // body.classList.add("block-scroll");
+    body.classList.add("block-scroll");
     contactPopapBlock.classList.add("displayBlock");
     if(burger.classList.contains('menu-open')){
         burgers.forEach(item => item.classList.toggle('menu-open'));
@@ -24,7 +24,7 @@ contactPopapCloseBtn.addEventListener("click", () => {
     contactPopapBlock.classList.remove("displayBlock");
     wrapper.classList.remove("overlay");
     window.onscroll = function () { return false };
-    // body.classList.remove("block-scroll");
+    body.classList.remove("block-scroll");
 });
 
 // ! open/close loggin popap       
@@ -46,5 +46,5 @@ loggedPopapCloseBtn.addEventListener("click", () => {
     loggedPopap.classList.remove("loggedPopapBlock");
     wrapper.classList.remove("overlay");
     window.onscroll = function () { return false };
-    // body.classList.remove("block-scroll");
+    body.classList.remove("block-scroll");
 });

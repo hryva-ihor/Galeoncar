@@ -5,6 +5,7 @@
     padding-bottom: 80px;
     position: fixed;
     top: -100%;
+    border-radius: 5px;
     // line-height: 120%;
     // right: 0;
     left: 50%;
@@ -32,7 +33,7 @@
             text-stroke: 1px $color-3;
 
             text-transform: uppercase;
-            padding: 40px 20px;
+            padding: 10px 20px;
             // z-index: 100;
             position: relative;
 

@@ -5,7 +5,8 @@ const accordion = document.querySelectorAll(".head, .hidden");
 const burger = document.querySelector(`#burger-icon`);
 const burgers = document.querySelectorAll('.header__menu, .burger-icon, .app-link');
 const body = document.querySelector(`body`);
-
+const headerBody = document.querySelector(`.header__body`);
+const headerAnker = document.querySelectorAll(`.linkAnker`);
 //! from   ('js_parts/popap.js')
 // close google maps contakt block
 const contactBlockCloseBtn = document.querySelector('#contactBlockCloseBtn');

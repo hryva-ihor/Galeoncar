@@ -250,13 +250,13 @@
         display: block;
         position: absolute;
         left: 50%;
-        width: 70vw;
+        width: 100vw;
         top: 102px;
         transform: translate(-50%,0);
         z-index: 1000;
         & .header__menu-lists{
             // flex-direction: column;
-            padding: 40px 20px 100px 20px;
+            padding: 40px 40px 120px 40px;
             row-gap: 16px;
             background-color: $color-2;
         }
@@ -275,11 +275,15 @@
         z-index: 10000;
     }
 }
+.positionRelativeHeader{
+    position: relative;
+    z-index: 10000;
+}
 @media screen and( max-width: 880px) {
     .header__menu.menu-open{
         & .header__menu-lists{
             // flex-direction: column;
-            padding: 40px 10px 100px 10px;
+            padding: 40px 20px 100px 20px;
         }
     }
     .app-link.menu-open {
