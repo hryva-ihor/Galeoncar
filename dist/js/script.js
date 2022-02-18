@@ -19,7 +19,7 @@ const contactBlock = document.querySelector('#contactBlock');
 const wrapper = document.querySelector('#wrapper');
 
 // open/close loggin
-const logginBtn = document.querySelectorAll('#loggin-btn-header, #loggin-btn-footer');
+const logginBtn = document.querySelectorAll('#loggin-btn-header, #loggin-btn-footer, .rent-type__aboute-item-btn, .btn-offer-car, .carousel-reviews__item-aboute');
 const loggedPopap = document.querySelector('.logged-popap');
 const loggedPopapCloseBtn = document.querySelector('.form-loggin-close-btn');
 
