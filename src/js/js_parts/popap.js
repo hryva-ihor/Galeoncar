@@ -30,6 +30,7 @@ contactPopapCloseBtn.addEventListener("click", () => {
 // ! open/close loggin popap       
 logginBtn.forEach(item =>{
     item.addEventListener("click", (e) => {
+        e.stopPropagation()
     let scrollX = window.scrollX
     let scrollY = window.scrollY;
     window.onscroll = function () { window.scrollTo(scrollX, scrollY); };
