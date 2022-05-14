@@ -1,0 +1,472 @@
+.header {
+
+    &__body {
+        max-width: 1440px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // gap: 20px;
+        // position: relative;
+        // border: 1px solid red;
+    }
+
+    // &__logo {
+    // }
+
+    // &__logo-svg {
+    // }
+// !        NAVIGATION        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    &__nav {
+        max-width: 700px;
+        width: 100%;
+    }
+@media screen and (max-width: 1240px) {
+    .header__menu {
+        display: none;
+    }
+    .app-link {
+        display: none;
+    }
+    .header__under {
+        justify-content:flex-end; 
+    }
+
+}
+
+
+    &__menu-lists {
+        display: flex; 
+        justify-content: space-between;
+        // border: 1px solid red;
+    }
+    &__menu.menu-open{
+        display: none;
+    }
+
+    &__menu-lists-item {
+        font-style: normal;
+        font-weight: normal;
+        font-size: $fz-1;
+        line-height: 140%;
+        letter-spacing: 0.05em;
+        color: $color-1;
+        mix-blend-mode: normal;
+        opacity: 0.8;
+    }
+    &__menu-lists-item :hover{
+        color: #EDC5A2;
+    }
+    
+
+
+
+}
+.header{
+        display: flex;
+        flex-direction: column;
+        max-width: 950px;
+        width: 100%;
+        flex-wrap: wrap;
+}
+// !        LOGO        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+.header {
+    &__logo {
+        display: flex;
+        gap:10px;
+        margin-right: 90px;
+        margin-left: 15px;
+        a{
+            display: inline-block;
+        }
+    }
+
+}
+
+.header__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 75px;
+
+
+}
+@media screen and (max-width: 1240px) {
+    .header__top {
+        height: 50px;
+        justify-content: flex-end;
+    }
+    .header {
+        &__logo {
+            margin-right: 70px;
+        }
+
+        &__logo-lion {
+            max-width: 40px;
+        }
+    
+        &__logo-text {
+            max-width: 140px;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .header {
+
+        &__logo {
+            margin-right: 20px;
+    
+        }
+    
+        &__logo-lion {
+            max-width: 26px;
+        }
+    
+        &__logo-text {
+            max-width: 90px;
+        }
+    }
+
+}
+// @media screen and (max-width: 410px) {
+//     .header {
+    
+//         &__logo-lion {
+//             max-width: 20px;
+//         }
+    
+//         &__logo-text {
+//             max-width: 70px;
+//         }
+//     }
+
+// }
+// !        social icons        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+.social {
+
+    &__icons {
+        display: flex;
+        gap: 10px;
+        margin-top: 5px;
+    }
+
+    &__icons a:hover {
+        animation: 1200ms ease 0s normal none 1 running shake;
+    }
+}
+.header__under {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 75px;
+
+}
+@media screen and (max-width: 1240px) {
+    .header__under {
+        height: 50px;
+    }
+}
+// !        phone number        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+.phone-number {
+    span{
+        display: inline-block;
+        font-style: normal;
+        font-weight: bold;
+        font-size: $fz-2;
+        line-height: 120%;
+        letter-spacing: 0.05em;
+        color: $color-3;
+        
+    }
+    span:hover{
+        transform: scale(1.02);
+        transition: all 0.2s linear;
+    }
+
+}
+@media screen and (max-width: 460px) {
+    .phone-number {
+        span{
+            font-weight: bold;
+            font-size:$fz-1;
+        }
+    
+    }
+    .header__under {
+        height: 30px;
+    }
+    .header__top {
+        height: 30px;
+        justify-content: flex-end;
+    }
+    .header__logo {
+    margin-right: 5px;
+    gap: 0px;
+    }
+}
+// !        app-link        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+.app-link {
+    display: flex;
+    gap: 20px;
+}
+.app-store, .google-play {
+    border: 2px solid $color-1;
+    border-radius: 6px;
+}
+.app-store:hover, .google-play:hover{
+    box-shadow:0px -3px 20px 0px rgba(255, 255, 255, 0.8);
+    transition: all 0.2s linear;
+    transform: scale(1.02);
+}
+// .google-play {
+    
+// }
+
+.header__border{
+    border-top: 1px solid rgb(255, 255, 255,0.25);
+    width: 100%;
+}
+
+// !BURGER                  xxxxxxxxxxxxxxxxxxxxxxxxxx
+.burger-icon {
+    z-index: 10000;
+	width: 48px;
+	height: 48px;
+	border: none;
+	background: none;
+	// position: absolute;
+    // left: 0;
+	outline: none;
+	display: none;
+	cursor: pointer;
+    // z-index: 20;
+}
+@media screen and( max-width: 1240px) {
+    .burger-icon{
+        display: block;
+    }
+
+    .header__menu.menu-open{
+        display: block;
+        position: absolute;
+        left: 50%;
+        width: 100vw;
+        top: 102px;
+        transform: translate(-50%,0);
+        z-index: 1000;
+        & .header__menu-lists{
+            // flex-direction: column;
+            padding: 40px 40px 120px 40px;
+            row-gap: 16px;
+            background-color: $color-2;
+        }
+    }
+
+    .app-link.menu-open {
+
+        display: block;
+        display: flex;
+        // flex-direction: column;
+        position: absolute;
+        z-index: 1000;
+        left: 50%;
+        top: 200px;
+        transform: translate(-50%,0);
+        z-index: 10000;
+    }
+}
+.positionRelativeHeader{
+    position: relative;
+    z-index: 10000;
+}
+@media screen and( max-width: 880px) {
+    .header__menu.menu-open{
+        & .header__menu-lists{
+            // flex-direction: column;
+            padding: 40px 20px 100px 20px;
+        }
+    }
+    .app-link.menu-open {
+
+    }
+}
+@media screen and( max-width: 700px) {
+    .header__menu.menu-open{
+        width: 95%;
+    }
+}
+@media screen and( max-width: 540px) {
+    .header__menu.menu-open{
+        width: 100%;
+        top: 102px;
+        & .header__menu-lists{
+            align-items: center;
+            flex-direction: column;
+            padding: 40px 0 100px 0px;
+            row-gap: 16px;
+            background-color: $color-2;
+        }
+    }
+    .header__menu.menu-open .header__menu-lists{
+        // flex-direction: column;
+        width: 100%;
+        padding: 40px 20px 170px 20px;
+    }
+    .header__menu-lists-item{
+        border: 1px solid transparent;
+        border-radius: 5px;
+        padding: 5px;
+    }
+    .header__menu-lists-item:hover{
+        border: 1px solid $color-3;
+        border-radius: 5px;
+    }
+        .app-link.menu-open {
+        // left: 22px;
+        top: 460px;
+    }
+}
+@media screen and( max-width: 460px) {
+    .header__menu.menu-open{
+        top: 42px;
+        padding: 20px 0px 100px 0px;
+    }
+    .app-link.menu-open {
+        // left: 22px;
+        top: 400px;
+    }
+}
+@media screen and( max-width: 410px) {
+    .header__menu.menu-open{
+        top: 22px;
+        padding: 40px 0 100px 0px;
+    }
+    .header__menu.menu-open .header__menu-lists{
+        // flex-direction: column;
+        padding: 40px 20px 170px 20px;
+    }
+    .app-link.menu-open {
+        flex-direction: column;
+        top: 380px;
+    }
+}
+
+
+
+
+
+.burger-icon-item {
+	width: 22px;
+	height: 2px;
+	background: $color-1;
+	position: relative;
+    margin-left: 14px;
+    border-radius: 2px;
+    
+
+}
+
+.burger-icon-item::before {
+	content: "";
+	display: block;
+	width: 22px;
+	height: 2px;
+	background: #fff;
+	position: absolute;
+	top: -8px;
+	left: 0;
+    border-radius: 2px;
+    transition: all 0.3s ease 0s;
+}
+
+.burger-icon-item::after {
+	content: "";
+	display: block;
+	width: 22px;
+	height: 2px;
+	background: #fff;
+	position: absolute;
+	bottom: -8px;
+	left: 0;
+    border-radius: 2px;
+    transition: all 0.3s ease 0s;
+}
+.burger-icon.menu-open .burger-icon-item::before,
+.burger-icon.menu-open .burger-icon-item::after{
+    transform: rotate(-45deg);
+    top: 0px;
+    transition: all 0.3s ease 0s;
+    visibility: visible;
+}
+.burger-icon.menu-open .burger-icon-item::after{
+    transform: rotate(45deg);
+}
+.burger-icon.menu-open .burger-icon-item{
+    visibility: hidden;
+}
+
+
+
+
+
+
+// ! animation for social icons            xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+@keyframes shake {
+    0% {
+        transform: rotateZ(
+    0deg
+    );
+    }
+    
+    10% {
+        transform: rotateZ(
+    -30deg
+    );
+    }
+    20% {
+        transform: rotateZ(
+    15deg
+    );
+    }
+    30% {
+        transform: rotateZ(
+    -10deg
+    );
+    }
+    40% {
+        transform: rotateZ(
+    7.5deg
+    );
+    }
+    50% {
+        transform: rotateZ(
+    -6deg
+    );
+    }
+    60% {
+        transform: rotateZ(
+    5deg
+    );
+    }
+    70% {
+        transform: rotateZ(
+    -4.28571deg
+    );
+    }
+    80% {
+        transform: rotateZ(
+    3.75deg
+    );
+    }
+    90% {
+        transform: rotateZ(
+    -3.33333deg
+    );
+    }
+    100% {
+        -webkit-transform: rotateZ(
+    0deg
+    );
+}
+}

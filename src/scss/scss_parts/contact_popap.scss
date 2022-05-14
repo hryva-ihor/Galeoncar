@@ -1,0 +1,115 @@
+.contact-popap {
+    background-color: $color-5;
+    max-width: 1200px;
+    padding-bottom: 80px;
+    position: fixed;
+    top: -100%;
+    border-radius: 5px;
+    // line-height: 120%;
+    // right: 0;
+    left: 50%;
+    transform: translate(-50%, -500%);
+    z-index:100;
+    // margin-left: 50%;
+    transition:all .6s;
+    >div{
+        display: grid;
+        grid-template-columns: repeat(3,minmax(150px, 1fr));
+        gap: 10px;
+        padding: 20px;
+    }
+    &__title {
+            width: 100%;
+            font-family: $ff;
+            font-style: normal;
+            font-weight: 900;
+            font-size: $fz-4;
+            line-height: $fz-5;
+            letter-spacing: 7px;
+            text-align: center;
+            color: transparent;
+            -webkit-text-stroke: 1px $color-3;
+            // text-stroke: 1px $color-3;
+
+            text-transform: uppercase;
+            padding: 10px 20px;
+            // z-index: 100;
+            position: relative;
+            .contact-popap__title-btnClose{
+                position: absolute;
+                top: -8px;
+                right: -8px;
+                display: inline-block;
+                width: $fz-3;
+                height: $fz-3;
+                border-radius: 50%;
+                background-color: $color-5;
+                box-shadow: 0 0 19px 0 #8a8484;
+            }
+            .contact-popap__title-btnClose.icon-plus:before {
+                    font-size: $fz-3;
+                    right: -7px;
+
+
+
+            }
+        }
+
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    &__item-top {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        color: $color-1
+    }
+
+    &__item-under {
+        font-style: normal;
+        font-weight: bold;
+        font-size: $fz-1;
+        color: $color-1
+    }
+}
+@media screen and( max-width: 500px) {
+    .contact-popap {
+        >div{
+            grid-template-columns: minmax(150px, 1fr);
+        }
+        &__item {
+            display: flex;
+            flex-direction: row;
+            column-gap: 10px;
+        }
+        &__title{
+            font-size: 40px;
+        }
+    }
+}
+
+.displayBlock{
+    transform: translate(-50%, 0);
+    top: 10%;
+}
+
+
+/* активируем слой затемнения */
+.overlay {
+    &::after{
+        content: "";
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.65);
+        z-index: 10;
+    }
+    
+}
+

@@ -1,0 +1,298 @@
+.accordion-rent__body{
+    position: relative;
+    padding:  $block-padding-top-bottom 0;
+    overflow: hidden;
+    .body-img, .body-shadow {
+        width: 100%;
+		height: 100%;
+		object-fit: cover;
+		position: absolute;
+		left: 0;
+		top: 0;
+    }
+    .title{
+        position: relative;
+        z-index: 10;
+    }
+    .conteiner{
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+}
+
+.accordeon__body{
+    position: relative;
+    z-index: 10;
+    margin: 0 20px 0 10px;
+    flex: 0 1 870px;
+}
+@media screen and (max-width: 1000px){
+    .accordeon-content{
+        flex-direction: column-reverse;
+
+    }
+    .accordeon__body{
+        flex: 1 1 auto;
+    }
+    .accordion-rent__aboute{
+        flex: 0 1 1000px;
+        margin: 0 10px;
+        flex-direction: row;
+        column-gap: 70px;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-height: 300px;
+        // align-items: center;
+        div{
+
+            flex: 0 1 390px;
+            div:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.accordeon-content{
+    display: flex;
+    
+    justify-content: space-between;
+    column-gap: 25px;
+    row-gap: 40px;
+}
+.accordion-rent__aboute{
+    background-color: $color-5;
+    z-index: 10;
+}
+
+//! accordeon       
+.accordeon li{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.153);
+    mix-blend-mode: normal;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    h4{
+        height: 30px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: $fz-1;
+        line-height: 120%;
+        text-transform: uppercase;
+        color: $color-1;
+        margin-top: 13px;
+    }
+    div{
+        font-style: normal;
+        font-weight: normal;
+        font-size: $fs-01;
+        line-height: 160%;
+        letter-spacing: 0.05em;
+        color: $color-1;
+        }
+
+}
+.accordeon li h4::after{
+    font-family: 'icomoon' !important;
+    // speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\e90b";;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    color: $color-1;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition:all 0.3s linear;
+}
+.accordeon li h4.active::after{
+    transform: rotate(180deg);
+    transition:all 0.3s linear;
+    right: -7px;
+}
+.hidden{
+    width:90%;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: 0.05em;
+    color:$color-1;
+    // visibility: hidden;
+    max-height:0px;
+    transform: scale(0);
+    overflow:hidden;
+    // opacity:0;
+    transition: max-height 0.5s ease-in-out;
+}
+.hidden ul li{
+    border-bottom: none;
+    padding-left: 20px;
+    margin: 15px 0;
+}
+.hidden ul {
+    position: relative;
+}
+.hidden ul li::before{
+    content: "";
+    width: 10px;
+    height: 1px;
+    background-color: $color-1;
+    position: absolute;
+    top:12px;
+    left: 0;
+}
+.head.active + .hidden{
+    // padding:30px 0;
+    max-height:500px;
+    transform: scale(1);
+    // visibility: visible;
+    // max-height:fit-content;
+    transition: max-height 0.5s ease-in-out;
+    // overflow:none;
+    // opacity:1;
+}
+
+.accordion-rent {
+
+    &__aboute {
+        padding: 43px 100px 43px 87px;
+        display: flex;
+        flex-wrap: wrap;
+        max-height: 600px;
+        // flex-direction: column;
+        flex: 0 1 390px;
+        position: relative;
+        // z-index: 10;
+        div{
+            flex: 0 1 230px;
+            margin-bottom: 40px;
+            position: relative;
+
+        }
+        // bord 
+        &:after{
+            content:"";
+            border: 1px solid $color-3;;
+            position:absolute;
+            left:25px;
+            top:-25px;
+            width:97%;
+            height:110%;
+            z-index:-10;
+        }
+    }
+
+    &__aboute-title {
+        font-family: $ff;
+        margin-bottom: 8px;
+        font-style: normal;
+        font-weight: bold;  
+        font-size: $fz-1;
+        text-transform: uppercase;
+        color: $color-1;
+
+    }
+
+    &__aboute-text{
+        font-style: normal;
+        font-weight: normal;
+        font-size: $fs-01;
+        letter-spacing: 0.05em;
+        color: $color-1;
+    }
+}
+@media screen and (max-width: 1000px){
+    .accordion-rent__aboute{
+        flex: 0 1 1000px;
+        margin: 0 5px;
+        // flex-direction: row;
+        column-gap: 70px;
+        // justify-content: center;
+        padding: 20px 20px 20px 50px;
+
+        div{
+            flex: 0 1 140px;
+            margin-bottom: 0;
+
+        }
+        &:after{
+            left:20px;
+            height:105%;
+            // z-index:-10;
+        }
+    }
+}
+@media screen and (max-width: 700px){
+    .accordion-rent__aboute{
+        column-gap: 20px;
+        &:after{
+            left:0px;
+            height:105%;
+            // z-index:-10;
+        }
+        div{
+            flex: 0 1 100px;
+        }
+    }
+}
+@media screen and (max-width: 500px){
+    .accordion-rent__aboute{
+        padding: 20px 10px 20px 30px;
+
+    }
+}
+.autopark__carousel-item{
+    position: relative;
+}
+.autopark__carousel-item-text{
+    opacity: 0;
+    background-color: rgba(35, 39, 49, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 20px;
+        span{
+            margin-right: 5px;
+            font-style: normal;
+            font-weight: normal;
+            font-size: $fz-1;
+            line-height: 140%;
+            letter-spacing: 0.05em;
+            color: $color-1;
+        }
+    }
+}
+.btn-offer-car.btn-offer-car__autocarousel{
+    position: absolute;
+    bottom: 50%;
+    left: 5px;
+    line-height: 5rem;
+    transform: translate(0,50%);
+    background-color: transparent;
+    width: fit-content;
+    padding: 0 5px;
+    height: fit-content;
+    &:hover{
+        color: $color-3;
+        border: 1px solid $color-3;
+    }
+}
+
+.autoparkCarouselItemTextBlock{
+    opacity: 1;
+    transition:all 0.3s linear;
+}

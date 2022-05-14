@@ -1,0 +1,49 @@
+.autopark {
+    &__body {
+        padding: $block-padding-top-bottom 0;
+    }
+    &__carousel-body {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+
+
+    &__carousel-item {
+        width: 100%;
+        height: 100%;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+.title {
+    
+    div{
+        display: flex;
+        justify-content: center;
+        
+    }
+    &__item-beyond {
+        margin-bottom: 42px;
+    }
+
+    &__item-above:not(:first-child){
+        border-left: 1px solid $color-1;
+    
+    }
+    &__item-above{
+        line-height:18px;
+        padding: 0 24px;
+    }
+
+}
+
+@media screen and (max-width: 410px) {
+    .title__item-above{
+        padding: 0 12px;
+    }
+}

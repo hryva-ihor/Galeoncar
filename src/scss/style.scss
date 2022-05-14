@@ -1,0 +1,210 @@
+// ! null style         
+@import "scss_parts/nullstyle.scss";
+
+//! HTML font size for rem 
+@media screen and( min-width: 1280px) {
+    html{
+        font-size: 10px;
+    }
+}
+
+@media screen and( max-width: 1280px) {
+    html{
+        font-size: 9px;
+    }
+}
+@media screen and( max-width: 1000px) {
+    html{
+        font-size: 8px;
+    }
+}
+@media screen and( max-width: 768px) {
+    html{
+        font-size: 7px;
+    }
+}
+@media screen and( max-width: 470px) {
+    #wrapper{
+        padding: 0 10px;
+
+    }
+}
+// @media screen and( max-width: 430px) {
+//     html{
+//         font-size: 5px;
+//     }
+// }
+
+//! constructor for font-face
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff2") format("woff2"), url("../fonts/#{$file_name}.woff") format("woff");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+
+//! padding section
+$block-padding-top-bottom: 14rem;
+
+// ! fons size variables
+$fs-001: 1.2rem;
+$fs-01: 1.6rem;
+$fz-1:1.8rem;
+$fz-1-2: 2.4rem;
+$fs-2-1: 3rem;
+$fz-2:3.6rem;
+$fz-3:4.2rem;
+$fz-4:7.2rem;
+$fz-5:9.2rem;
+
+
+$ff: "Gilroy";
+
+
+// ! color size variables
+$color-1: #FFFFFF;
+$color-2: #15171e;
+$color-3: #EDC5A2;
+$color-4: black;
+$color-5: #232731;
+
+@import "scss_parts/fonts";
+@import "scss_parts/icomoonstyle";
+
+*{
+	font-family: "Gilroy";
+}
+
+#wrapper{
+    background-color: $color-2;
+	padding: 0 15px;
+
+}
+#conteiner{
+    max-width: 1920px;
+    margin: 0 auto;
+}
+.container{
+    max-width: 1920px;
+    margin: 0 auto;
+}
+section{
+    max-width: 1920px;
+    margin: 0 auto;
+}
+.border-gradient{
+	background: linear-gradient(black,hsla(0, 0%, 100%, 0.15),black);;
+	height: 2px
+}
+
+.title {
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0 0  80px 0;
+    &__item-above {
+        font-style: normal;
+        font-weight: normal;
+        font-size: $fz-1-2;
+        line-height: 120%;
+        /* identical to box height, or 29px */
+
+        letter-spacing: 0.05em;
+
+        /* white */
+
+        color: $color-1;
+        margin-bottom: 8px;
+    }
+
+    &__item-beyond {
+        font-style: normal;
+        font-weight: 900;
+        font-size: $fz-3;
+        line-height: 61px;
+        letter-spacing: 0.1em;
+
+        /* pr4 */
+
+        color: $color-3
+    }
+}
+
+//style for google map, delet icons
+.gm-style-mtc > div,
+.gmnoprint > div,
+.gm-svpc {
+    display: none;
+}
+
+// btn "заказать машину"
+.btn-offer-car {  
+    font-style: normal;
+    font-weight: bold;
+    font-size: $fz-1;
+    text-transform: uppercase;
+    display: inline-block;
+    border: 1px solid $color-1;
+    background-color: #394155;
+    box-sizing: border-box;
+    border-radius: 6px;
+    width: 222px;
+    height: 48px;
+    color: $color-1;
+    line-height: 48px;
+    text-align: center;
+    &:hover{
+        color: $color-2;
+        background-color: $color-1;
+    }
+}
+
+.to-up {
+    position: fixed;
+    width: $fz-3;
+    height: $fz-3;
+    bottom: 28px;
+    right: 28px;
+    display: none;
+    text-align: center;
+    line-height: $fz-3;
+    border-radius: 50%;
+    // z-index: 22;
+    cursor: pointer;
+    background-color: $color-3;
+    z-index: 100000;
+    transition: all 0.2s ease-in-out;
+    &:hover{
+        box-shadow: 0 0 19px 0 #edc5a25e;
+        transform: scale(1.05);
+        transition: all .2s ease-in-out;
+        }
+    }
+
+// block scroll class
+.block-scroll{
+    overflow: hidden;
+}
+.displayNone{
+    display: none;
+}
+
+
+
+@import "scss_parts/header";
+@import "scss_parts/section__rent-car";
+@import "scss_parts/section_rent-tipe";
+@import "scss_parts/section_autopark__body";
+@import "scss_parts/section_accordion-rent__body";
+@import "scss_parts/section__reviews";
+@import "scss_parts/section_contact_body";
+@import "scss_parts/contact_popap";
+@import "scss_parts/logged_popap";
+@import "scss_parts/footer";
+
+//! style for slider
+@import "scss_parts/index_slider";
+
+

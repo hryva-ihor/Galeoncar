@@ -1,0 +1,192 @@
+.rent-type__block{
+    padding: $block-padding-top-bottom 0;
+    background-color: $color-4;
+}
+
+
+
+.rent-type {
+
+
+
+    &__aboute {
+        background-color: $color-4;
+        display: flex;
+
+        // display: grid;
+        // grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        row-gap: 24px;
+        flex-wrap: wrap;
+    }
+
+    &__aboute-item {
+        
+        position: relative;
+        flex: 1 1 370px;
+    }
+    &__aboute-item-img {
+        height: 100%;
+        
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            
+        }
+
+    }
+    &__aboute-item-text{
+        opacity: 0;
+        font-style: normal;
+        font-weight: normal;
+        font-size: $fz-1;
+        letter-spacing: 0.05em;
+        color: $color-1;
+        position: absolute;
+        top: 0;
+        background: #232731cc;
+        width: 100%;
+        height: 100%;
+        padding: 40px;
+        // transition: all 0.5s ease-in-out;
+        
+    }
+
+    &__aboute-item-btn {
+        transition: all 0.5s ease-in-out;
+        display: flex;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translate(-50%,0%);
+        span{
+            width: 222px;
+            height: 48px;
+            display: inline;
+            color: $color-1;
+            z-index: 10;
+            vertical-align: middle;
+            text-align: center;
+            text-transform: uppercase;
+            font-style: normal;
+            font-weight: 600;
+            font-size: $fz-1;
+            border: 1px solid $color-1;
+            border-radius: 6px;
+            line-height: 48px;
+            &:hover{
+                border: 2px solid $color-3;
+            }
+            
+        }
+    }
+}
+@media screen and( max-width: 1400px) {
+    .rent-type{
+        &__aboute-item-text{
+            padding: 15px;
+        }
+        &__aboute-item-btn {
+            bottom: 10px;
+        }
+    }
+}
+@media screen and( max-width: 1140px) {
+    .rent-type{
+        &__aboute-item-text{
+            padding: 20px;
+        }
+        &__aboute-item {
+            position: relative;
+            flex: 1 1 370px;
+            // &:last-child{
+            //     >div{
+            //         padding: 200px;
+            //     }
+            // }
+        }
+    }
+    
+}
+@media screen and( max-width: 1280px) {
+    .rent-type{
+        &__aboute-item-text{
+            padding: 10px;
+        }
+        &__aboute-item-btn {
+            bottom: 5px;
+        }
+    }
+    
+}
+@media screen and( max-width: 410px) {
+    .rent-type{
+        &__aboute-item-text{
+            padding: 10px;
+        }
+        &__aboute-item-btn {
+            bottom: 5px;
+        }
+    }
+}
+@media screen and( max-width: 770px) {
+    .rent-type{
+        &__aboute-item-text{
+            padding: 20px;
+        }
+        &__aboute-item {
+            position: relative;
+            flex: 1 1 370px;
+            // &:last-child{
+            //     >div{
+            //         padding: 100px;
+            //     }
+            // }
+            //     >div{
+            //         padding: 100px;
+            //     }
+        }
+        &__aboute-item-btn {
+            bottom: 20px;
+        }
+    }
+    
+}
+@media screen and( max-width: 520px) {
+    .rent-type{
+        &__aboute-item {
+            position: relative;
+            flex: 1 1 370px;
+            // &:last-child{
+            //     >div{
+            //         padding: 0px;
+            //     }
+            // }
+            //     >div{
+            //         padding: 5px;
+            //     }
+        }
+    }
+    
+}
+@media screen and( min-width: 1500px) {
+    .rent-type{
+        &__aboute-item {
+            position: relative;
+            flex: 1 1 370px;
+                // >div{
+                //     padding: 80px;
+                // }
+        }
+    }
+    
+}
+.rentTextBlock{
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+// .rentBtnBorder {
+//     span{
+//         border: 1px solid $color-3;
+//     }
+// }
